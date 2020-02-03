@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<script>
+  //This function returns all divisors of the number other than one and itself.
+  // If it is a prime number then return prime.
+  function returnDivisors(num) {
+    let resultArray = [];
+    if (num === 1 || num === 2) {
+      return `${num} is prime`;
+    }
+    else {
+      for (let index = 2; index < num; index++) {
+        if (num % index === 0) {
+          resultArray.push(index);
+        }
+      }
+      // console.log('resultArray', resultArray);
+      if (resultArray.length === 0) {
+        return `${num} is prime`;
+      }
+        return resultArray;
+    }
+  }
+
+  let divisors = returnDivisors(13);
+  console.log(divisors);
+</script>
+
+<body>
+
+</body>
+
+</html>
