@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <!-- [
+  { name: "John", notes: [3, 5, 4]}
+  ] ➞ [
+  { name: "John", topNote: 5}
+  ] -->
+  <script>
+    function getStudentsWithNamesAndTopNotes(students) {
+      let resultArray = [];
+      let studentObj = {};
+      for (index = 0; index < students.length; index++) {
+        studentObj.name = students[index].name;
+        if (students[index].notes.length === 0) {
+          studentObj.topNote = 0;
+        }
+        else{
+          studentObj.topNote = students[index].notes.reduce((a, b) => {
+            return Math.max(a, b);
+          });
+        }
+        resultArray.push(studentObj);
+        studentObj = {};
+      }
+      return resultArray;
+    }
+    var students = [
+      { name: "John", notes: [] }
+    ];
+    console.log(getStudentsWithNamesAndTopNotes(students));
+  </script>
+</head>
+
+<body>
+  Create a function that takes an array of objects like { name: 'John', notes: [3, 5, 4]} and returns an array of
+  objects
+  like { name: "John", topNote: 5 }.
+
+  If student has no notes (an empty array) then let's assume topNote: 0.
+</body>
+
+</html>
