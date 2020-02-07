@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+    function getTotalPrice(groceries) {
+      debugger;
+      let totalPrice = groceries.reduce((accumulator,currentVal)=>{
+        return accumulator + (currentVal.quantity * currentVal.price);
+      });
+      console.log('Total price is ',totalPrice);
+      }
+      var groceries = [
+          { product: "Milk", quantity: 1, price: 1.50 },
+          { product: "Cereals", quantity: 1, price: 2.50 }
+        ];
+      getTotalPrice(groceries);
+  </script>
+</head>
+<body>
+Create a function that takes an array of objects (groceries) which calculates the total price and returns it as a
+number. A grocery object has a product, a quantity and a price, for example:
+ 1 bottle of milk & 1 box of cereals:
+getTotalPrice([
+{ product: "Milk", quantity: 1, price: 1.50 },
+{ product: "Cereals", quantity: 1, price: 2.50 }
+]) ➞ 4
+</body>
+</html>
