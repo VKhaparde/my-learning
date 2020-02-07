@@ -7,14 +7,14 @@
   <title>Document</title>
   <script>
     function getTotalPrice(groceries) {
-      debugger;
       let totalPrice = groceries.reduce((accumulator,currentVal)=>{
         return accumulator + (currentVal.quantity * currentVal.price);
-      });
+      },0);
       console.log('Total price is ',totalPrice);
+      return parseFloat(totalPrice).toFixed(1);
       }
       var groceries = [
-          { product: "Milk", quantity: 1, price: 1.50 },
+          { product: "Milk", quantity: 1, price: 1.58 },
           { product: "Cereals", quantity: 1, price: 2.50 }
         ];
       getTotalPrice(groceries);
