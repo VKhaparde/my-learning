@@ -42,7 +42,7 @@ export default class Clock extends React.Component {
           })
         }
         </ol>
-        <Blog posts={posts} />
+        <Blog posts ={posts} />
       </div>
     );
   }
