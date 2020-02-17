@@ -14,12 +14,20 @@
   <script>
     function myMap() {
       var mapProp = {
-        myCenter: new google.maps.LatLng(33.6846, -117.8265),
-        zoom: 10,
+        center: new google.maps.LatLng(33.6846, -117.8265),
+        zoom: 10
       };
       var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+      var image = {
+        url : "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.britannica.com%2Fscience%2Fray-flower&psig=AOvVaw31S6xZjuvvzCc8JcTy18vR&ust=1582004493691000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMjI6pHw1-cCFQAAAAAdAAAAABAD",
+        size: new google.maps.Size(71, 71)
+      }
       var marker = new google.maps.Marker({
-        position: new google.maps.LatLng(33.6846, -117.8265)
+        icon: image,
+        position: mapProp.center,
+        animation: google.maps.Animation.BOUNCE,
+        draggable:true
+
       });
       marker.setMap(map);
     }
