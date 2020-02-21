@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <script>
-    function getLength(arr) {
-      let arr1 = arr.flat();
-      let arr2 = arr1.flat();
-      return arr2
-      }
-    console.log(getLength([1, [2, [3, [4, [5, 6]]]]]));
+    const getLength = arr => arr.flat(Infinity).length;
+    const arr = [1, [2, [3, [4, [5, 6]]]]];
+    console.log(getLength(arr));
   </script>
 </head>
+
 <body>
 
 </body>
+
 </html>
