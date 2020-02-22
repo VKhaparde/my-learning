@@ -7,9 +7,22 @@
   <title>Document</title>
   <script>
     function oddishOrEvenish(num) {
-      if(num%2 === 0)
-      return ''
+      const numString  = num.toString();
+      console.log('numString',numString);
+      const numArray = numString.split('');
+      console.log('numArray', numArray);
+      const sum = numArray.reduce((acc,currentVal)=>{
+        return acc + parseInt(currentVal) ;
+      },0)
+      console.log('Sum of numbers',sum)
+      if(sum%2 === 0){
+        return 'Evenish';
       }
+      else {
+        return 'Oddish';
+      }
+      }
+      console.log(oddishOrEvenish(4433));
   </script>
 </head>
 <body>
