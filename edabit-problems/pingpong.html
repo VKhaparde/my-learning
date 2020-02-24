@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+    function pingPong(arr, win) {
+      let resultArray = [];
+      if (win === true) {
+        for (let i = 0; i < arr.length; i++) {
+          if (i % 2 !== 0) {
+            arr.splice(i, 0, "Pong!");
+          }
+          resultArray.push(arr[i]);
+        }
+        resultArray.push("Pong!");
+      } else if (win === false) {
+        for(let i=0;i<arr.length; i++){
+           if (i % 2 !== 0) {
+            arr.splice(i, 0, "Pong!");
+          }
+          resultArray.push(arr[i]);
+        }
+      }
+      return resultArray;
+    }
+    console.log(pingPong(["Ping!", "Ping!"], false));
+    console.log(pingPong(["Ping!", "Ping!", "Ping!"], true));
+    console.log(pingPong(["Ping!"], true));
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
