@@ -16,7 +16,7 @@
           let first = new Date(arr[i - 1].date).getTime();
           let second = new Date(arr[i].date).getTime();
           if (second - first === 1000 * 60 * 60 * 24) {
-            r[i] = r[i] + 1;
+            r[i] = r[i-1] + 1;
           }
           else {
             r[i] = 1;
@@ -37,10 +37,10 @@
         "date": "2019-09-20"
       },
       {
-        "date": "2019-09-21"
+        "date": "2019-09-26"
       },
       {
-        "date": "2019-09-22"
+        "date": "2019-09-27"
       },
       {
         "date": "2019-09-23"
