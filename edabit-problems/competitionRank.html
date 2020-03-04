@@ -9,45 +9,15 @@
 </head>
 <script>
   function competitionRank(results, person) {
-    let resultsArray = [];
-    let index = 1;
-    for (let score in results) {
-      if (resultsArray.indexOf([score, results[score], index]) === -1) {
-        resultsArray.push([score, results[score], index]);
-        index++;
-      }
-      else if (resultsArray.indexOf([score, results[score]]) !== -1) {
-        resultsArray.push([person, results[person], index]);
-      }
-    }
-    console.log('resultsArray', resultsArray);
-    resultsArray.sort((a, b) => { return b[1] - a[1]; });
-    console.log('resultsArray', resultsArray);
-    let rankingArray = [];
-    let count = 1;
-    for (let i = 0; i < resultsArray.length - 1; i++) {
-      debugger;
-      if (resultsArray[i][1] === resultsArray[i + 1][1]) {
-        resultsArray[i + 1][2] = resultsArray[i][2];
-        count++;
-        console.log('count',count)
-      }
-      else if (resultsArray[i][1] !== resultsArray[i + 1][1]) {
-        resultsArray[i + 1][2] = count+1;
-        count = 0;
-      }
-
-      rankingArray.push(resultsArray[i]);
-    }
-    console.log('count',count)
-    // resultsArray[resultsArray.length - 1][2] = resultsArray[resultsArray.length - 2][2] + count +1;
-    // rankingArray.push(resultsArray[resultsArray.length-1]);
-    console.log('Ranking Array', rankingArray);
-    const rank = rankingArray.filter((currentVal, index) =>
-       currentVal.includes(person))
-    console.log('rank:', rank)
-    return rank[0][2];
+   let rank =1;
+   for(let prop in results){
+     if(results[prop] > results[person]){
+       rank++;
+     }
+   }
+   return rank;
   }
+
   // console.log(competitionRank({
   //   George: 96,
   //   Emily: 95,
@@ -61,7 +31,8 @@
     Vandana:92,
     Jess: 87,
     Bruce: 87,
-    Scott: 84
+    Scott: 84,
+    PIII:100
   }, "Bruce"));
 </script>
 
