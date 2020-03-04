@@ -9,20 +9,35 @@
   function palindromeSieve(nums) {
     const numStringArray = nums.filter((currentVal)=>{
       let numString = currentVal.toString();
-      console.log('numString',numString);
       let stringSplitted = numString.split("");
-      let reverseString = [];
-      for(let i=stringSplitted.length-1;i>0;i--){
-        reverseString.push(stringSplitted[i]);
+      let reverseStringArray = [];
+      for(let i=stringSplitted.length-1;i>=0;i--){
+        reverseStringArray.push(stringSplitted[i]);
       }
-      reverseString.join('');
+     let reverseString =  reverseStringArray.join('');
       if(reverseString === numString){
         return currentVal;
       }
     })
     return numStringArray;
     }
+
+    
+  // const palindromeSieve = nums => nums.filter(num => almostPalindrome(num));
+  //   function almostPalindrome(num) {
+  //     debugger;
+  //     var str = num.toString();
+  //     var digits = [...new Set(str)];
+  //     var oddCount =
+  //       digits.filter(digit => digitCount(str, digit) % 2 == 1).length;
+  //     return oddCount < 2;
+  //   };
+
+  //   const digitCount = (str, digit) => {
+  // debugger;
+  //     [...str].filter(el => el === digit).length};
     console.log(palindromeSieve([443, 12, 639, 121, 3232]));
+    console.log(palindromeSieve([555, 68786887,9]));
   </script>
 </head>
 <body>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<script>
+  function numInString(arr){
+   const numStrings =  arr.filter((currentVal)=> {
+      let stringArray = currentVal.split('');
+      let containsNumberArray = [];
+      let numberPresent =false;
+      for(let i=0;i<stringArray.length;i++){
+        console.log('Is this a number', !isNaN(stringArray[i]))
+        if( !isNaN(stringArray[i]) && stringArray[i]!== ' '){
+          numberPresent = true;
+        }
+      }
+      if(numberPresent){
+      let resultString = stringArray.join('');
+      containsNumberArray.push(resultString);
+      return containsNumberArray;
+      } 
+    })
+    return numStrings;
+  // return arr.filter((currentVal)=> currentVal.match(/[0-9]/)!== null)
+  }
+  console.log(numInString(["1a", "a", "2b", "b"]));
+  console.log(numInString(['-/>', '10bc', 'abc ']))
+</script>
+<body>
+
+</body>
+</html>
