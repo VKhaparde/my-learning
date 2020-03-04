@@ -7,7 +7,20 @@
   <title>Document</title>
   <script>
   function palindromeSieve(nums) {
-    
+    const numStringArray = nums.filter((currentVal)=>{
+      let numString = currentVal.toString();
+      console.log('numString',numString);
+      let stringSplitted = numString.split("");
+      let reverseString = [];
+      for(let i=stringSplitted.length-1;i>0;i--){
+        reverseString.push(stringSplitted[i]);
+      }
+      reverseString.join('');
+      if(reverseString === numString){
+        return currentVal;
+      }
+    })
+    return numStringArray;
     }
     console.log(palindromeSieve([443, 12, 639, 121, 3232]));
   </script>
