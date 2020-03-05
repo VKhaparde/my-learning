@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<script>
+  function uncensor(str, vowels) {
+    let strArray = str.split("");
+    let vowelsArray = vowels.split("");
+    console.log(strArray);
+    console.log(vowelsArray);
+
+   const uncensorString =  strArray.map(element => {
+        if (element === '*') {
+          for (let i = 0; i < vowelsArray.length; i++) {
+            element = vowelsArray[i];
+            vowelsArray.shift();
+            break;
+        }
+      }
+      return element;
+    })
+    return uncensorString.join("");
+  }
+  console.log(uncensor("Wh*r* d*d my v*w*ls g*?", "eeioeo"));
+</script>
+
+<body>
+
+</body>
+
+</html>
