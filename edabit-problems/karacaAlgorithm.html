@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<script>
+  function encrypt(word) {
+    console.log(word.split("").reverse());
+    let reverseWord = word.split("").reverse();
+    let replaceVowels = {
+      'a':0,
+      'e':1,
+      'o':2,
+      'u':3
+    };
+    let vowelsReplaced = reverseWord.map(currentVal=>{
+      switch(currentVal){
+        case 'a':
+          currentVal = 0 ;
+          break;
+        case 'e':
+          currentVal = 1;
+          break;
+        case 'o':
+          currentVal = 2;
+          break;
+       case 'u':
+          currentVal = 3;
+          break;
+      }
+      return currentVal;
+    })
+
+    return vowelsReplaced.join("")+"aca";
+  }
+  console.log(encrypt("banana"));
+</script>
+<body>
+
+</body>
+</html>
