@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<script>
+function filterPrimes(arr){
+ return arr.filter((currentVal)=>{
+   let isPrime = true;
+   let primesArray =[];
+   if(currentVal === 1){
+     isPrime = false;
+   }
+  for(let i=2;i<currentVal;i++){
+    if(currentVal%i === 0){
+      isPrime = false;
+    }
+  }
+  if(isPrime === true){
+    // primesArray.push(currentVal);
+    // return primesArray;
+    return currentVal;
+  }
+  })
+}
+console.log(filterPrimes([7, 9, 3, 9, 10, 11, 27]));
+console.log(filterPrimes([1009, 10, 10, 10, 3, 33, 9, 4, 1, 61, 63, 69, 1087, 1091, 1093, 1097])
+);
+</script>
+<body>
+
+</body>
+</html>
