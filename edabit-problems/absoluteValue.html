@@ -6,7 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <script>
-  
+  function getAbsSum(arr) {
+    const absArray = arr.map(currentVal => Math.abs(currentVal));
+    return absArray.reduce((acc,currentVal)=>{
+      return acc + currentVal;
+    },0)
+    }
+   console.log(getAbsSum([2, -1, 4, 8, 10]));
   </script>
 </head>
 <body>
