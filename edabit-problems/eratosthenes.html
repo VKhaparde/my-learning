@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+    function eratosthenes(n) {
+      let numsArray = [];
+      let primes = [];
+      if (n === 1 || n === 0) {
+        return [];
+      }
+      if(n===2){
+        return [2];
+      }
+      for (let i = 2; i <= n; i++) {
+        numsArray.push(i);
+      }
+      console.log(numsArray);
+      primes = numsArray.filter((currentVal) => {
+        let isPrime = true;
+        for (let i = 2; i < currentVal; i++) {
+          console.log('i',i)
+          if(currentVal%i === 0){
+           isPrime = false;
+           break;
+           console.log('isPrime',isPrime);
+          }
+        }
+        if (isPrime === true) {
+          console.log('currentVal',currentVal);
+          return currentVal;
+        }
+      })
+      return primes;
+    }
+    console.log(eratosthenes(10));
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
