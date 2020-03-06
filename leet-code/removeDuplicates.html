@@ -7,7 +7,10 @@
   <title>Document</title>
   <script>
  var removeDuplicates = function(nums){
-  
+  let uniqueArray = nums.filter((currentVal, index) => {
+     return nums.indexOf(currentVal) === index
+   });
+   return uniqueArray;
  }
  console.log('removeDuplicatesResult',removeDuplicates([]));
   </script>
