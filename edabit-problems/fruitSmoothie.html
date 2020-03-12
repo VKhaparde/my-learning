@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+    const prices = {
+        Strawberries: "$1.50", Banana: "$0.50", Mango: "$2.50",
+        Blueberries: "$1.00", Raspberries: "$1.00", Apple: "$1.75",
+        Pineapple: "$3.50"
+      };
+
+      class Smoothie {
+        constructor(arr){
+          this.ingredients = arr;
+        }
+        getCost(fruit){
+          return this.ingredients[fruit];
+        }
+      }
+      var s1 = new Smoothie(["Banana"]);
+      s1.getCost("Banana");
+  </script>
+</head>
+<body>
+
+</body>
+</html>
