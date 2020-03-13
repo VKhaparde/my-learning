@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+    function buildStaircase(height, block) {
+      let resultArray = [];
+      for (let i = 0; i < height; i++) {
+        let innerArray = [];
+        for(let j=0;j<height;j++){
+          let str;
+          if(j<=i){
+            str = block;
+          }
+          else{
+            str = "_";
+          }
+        innerArray.push(str);
+        }
+        resultArray.push(innerArray);
+      }
+      return resultArray;
+    }
+    console.log(buildStaircase(3, "#"));
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
