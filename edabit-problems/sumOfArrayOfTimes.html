@@ -24,6 +24,16 @@
       }
     console.log(timeSum(["1:03:45", "1:23:05"]));
     console.log(timeSum(["5:39:42", "10:02:08", "8:26:33"]) );
+    function combinations(items) {
+        let args = Array.from(arguments);
+       return  args.reduce((acc, element) => {
+         if(element){
+           acc = acc * element;
+         }
+          return acc;
+        }, 1)
+      }
+     console.log(combinations(2, 3,0,9));
   </script>
 </head>
 <body>
