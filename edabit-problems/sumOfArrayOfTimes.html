@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+    function timeSum(times) {
+     return  times.reduce((acc,currentVal)=>{
+        currentVal = currentVal.split(":");
+        let resultArray = [];
+        for(let i=0;i<currentVal.length;i++){
+          resultArray.push(parseInt(acc[i]) + parseInt(currentVal[i]));
+        }
+        for(let i=resultArray.length-1;i>0;i--){
+          if(resultArray[i] > 60){
+            resultArray[i]=resultArray[i] - 60;
+            resultArray[i-1] = resultArray[i-1]+1;
+          }
+        }
+        return resultArray;
+      },[0,0,0])
+      }
+    console.log(timeSum(["1:03:45", "1:23:05"]));
+    console.log(timeSum(["5:39:42", "10:02:08", "8:26:33"]) );
+  </script>
+</head>
+<body>
+
+</body>
+</html>
