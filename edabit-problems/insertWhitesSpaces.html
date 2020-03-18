@@ -27,8 +27,8 @@
     // })
     // console.log(str.join(""))
     // return str.join("");
-    }    return str.replace(/([a-z])([A-Z])/g , "$1 $2");
-
+       return str.replace(/([a-z])([A-Z])/g , ([lower,upper])=>`${lower} ${upper}`);
+    }
     console.log(insertWhitespace("TheGreatestUpsetInHistory"));
   </script>
 </head>
