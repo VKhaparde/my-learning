@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+  function insertWhitespace(str) {
+    // str = str.split("");
+    // console.log('str',str);
+    // var regex = new RegExp("[A-Z]");
+    // for(let i=0;i<str.length;i++){
+    //   if(str[i].match(regex) && i){
+    //     str.splice(i+1,0," ");
+    //   }
+    // }
+
+    // let result = str.map((currentVal,index,str)=>{
+    //   let temp;
+    //   if(str[index].match(regex) && index){
+    //     temp = str[index+1];
+    //     str[index+1]=" ";
+    //     str[index+2]=temp;
+    //   }
+    //   return str[index];
+    // })
+    // console.log(str.join(""))
+    // return str.join("");
+    }    return str.replace(/([a-z])([A-Z])/g , "$1 $2");
+
+    console.log(insertWhitespace("TheGreatestUpsetInHistory"));
+  </script>
+</head>
+<body>
+
+</body>
+</html>
