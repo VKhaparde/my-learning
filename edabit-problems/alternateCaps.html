@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+    function alternatingCaps(str) {
+      str = str.replace(/\s+/g, '');
+      str = str.split("");
+      console.log(str);
+      str = str.map((currentVal,index)=>{
+        if(index===0 && currentVal != " "){
+          currentVal=currentVal.toUpperCase();
+        }
+        else if(index%2!==0 && currentVal!= " "){
+          currentVal = currentVal.toLowerCase();
+        }
+        else if(index%2 === 0 && currentVal!= " "){
+          currentVal = currentVal.toUpperCase();
+        }
+        return currentVal;
+      })
+      return str.join("");
+      }
+    console.log(alternatingCaps("How are you?"));
+    console.log(alternatingCaps("OMG this website is awesome!"));
+  </script>
+</head>
+<body>
+
+</body>
+</html>
