@@ -9,10 +9,12 @@
   <script>
     function deepCount(arr) {
      return  arr.reduce((acc, currentVal) => {
+       debugger;
         if (Array.isArray(currentVal)) {
+          console.log('acc', acc);
           return acc + deepCount(currentVal) + 1;
         }
-        console.log('currentVal',currentVal)
+        console.log('currentVal',currentVal);
        return  acc + 1;
       }, 0)
     }
