@@ -9,6 +9,9 @@
    var a1 = [121, 144, 19, 161, 19, 144, 19, 11];
     var  a2 = [11 * 11, 121 * 121, 144 * 144, 19 * 19, 161 * 161, 19 * 19, 144 * 144, 19 * 19];
     function compArrays(arr1,arr2){
+      if(arr1 === [] || arr2 === [] || arr1 === null || arr2 === null){
+        return false;
+      }
       let containsSquare = true;
       for(let index=0;index<a1.length;index++){
         let square = Math.pow(a1[index], 2);
@@ -20,6 +23,46 @@
       return containsSquare;
     }
     console.log(compArrays(a1,a2));
+    var matrix = [
+        [1, 2, 3, 4],
+        [5, 6, 7, 8],
+        [9, 10,11,12],
+        [13,14,15,16]
+      ];
+    const spiralOrder = (matrix)=>{
+      if(!matrix.length || !matrix[0].length){
+        return [];
+      }
+      let result = [];
+      let rowBegin = 0;
+      let rowEnd = matrix.length - 1;
+      let columnBegin =0;
+      let columnEnd = matrix.length - 1;
+      while(rowBegin<=rowEnd && columnBegin <= columnEnd){
+        //move right
+        for(let i=columnBegin;i<=columnEnd;i++){
+          result.push(matrix[rowBegin][i]);
+        }
+        rowBegin++;
+        //move down
+        for(let i=rowBegin;i<=rowEnd;i++){
+          result.push(matrix[i][columnEnd]);
+        }
+        columnEnd--;
+        //move left
+        for(let i=columnEnd ; i>=columnBegin; i--){
+          result.push(matrix[rowEnd][i]);
+        }
+        rowEnd--;
+        //move upwards
+        for(let i=rowEnd;i>=rowBegin; i--){
+          result.push(matrix[i][columnBegin]);
+        }
+        columnBegin++;
+      }
+       return result;
+    }
+    console.log(spiralOrder(matrix));
   </script>
 </head>
 <body>
