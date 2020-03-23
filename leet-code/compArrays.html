@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+   var a1 = [121, 144, 19, 161, 19, 144, 19, 11];
+    var  a2 = [11 * 11, 121 * 121, 144 * 144, 19 * 19, 161 * 161, 19 * 19, 144 * 144, 19 * 19];
+    function compArrays(arr1,arr2){
+      let containsSquare = true;
+      for(let index=0;index<a1.length;index++){
+        let square = Math.pow(a1[index], 2);
+          if(!a2.includes(square)){
+            containsSquare = false ;
+            break;
+          }
+      }
+      return containsSquare;
+    }
+    console.log(compArrays(a1,a2));
+  </script>
+</head>
+<body>
+
+</body>
+</html>
