@@ -8,31 +8,16 @@
   <script>
   const recamanIndex = (n)=>{
     let recamanSequence = [0];
-    let length = recamanSequence.length;
-    let last = recamanSequence[length-1];
-    let element = last - length;
-
-    while(!(element >= n )){
-      last = recamanSequence[recamanSequence.length - 1];
-      length = recamanSequence.length;
-      element = last - length;
-
-      if (!(element < 0 || recamanSequence.includes(element))) {
-        recamanSequence.push(element);
-      }
-      else {
-        last = recamanSequence[recamanSequence.length - 1];
-        length = recamanSequence.length;
-        element = last + length;
-
-        if (!recamanSequence.includes(element)) {
-          recamanSequence.push(element);
-        }
-      }
+    while(!(recamanSequence.includes(n))){
+      let length = recamanSequence.length;
+      let last = recamanSequence[length - 1];
+      let difference = last - length;
+      let  element = (!(difference <= 0 ) && !(recamanSequence.includes(difference)) ) ? difference : last + length;
+      recamanSequence.push(element);
     }
-   return recamanSequence.indexOf(n);
+    return recamanSequence.indexOf(n);
   }
-  console.log(recaman(6));
+  console.log(recamanIndex(6));
   </script>
 </head>
 <body>
