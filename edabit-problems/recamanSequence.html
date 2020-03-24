@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+  const recamanIndex = (n)=>{
+    let recamanSequence = [0];
+    let length = recamanSequence.length;
+    let last = recamanSequence[length-1];
+    let element = last - length;
+
+    while(!(element >= n )){
+      last = recamanSequence[recamanSequence.length - 1];
+      length = recamanSequence.length;
+      element = last - length;
+
+      if (!(element < 0 || recamanSequence.includes(element))) {
+        recamanSequence.push(element);
+      }
+      else {
+        last = recamanSequence[recamanSequence.length - 1];
+        length = recamanSequence.length;
+        element = last + length;
+
+        if (!recamanSequence.includes(element)) {
+          recamanSequence.push(element);
+        }
+      }
+    }
+   return recamanSequence.indexOf(n);
+  }
+  console.log(recaman(6));
+  </script>
+</head>
+<body>
+
+</body>
+</html>
