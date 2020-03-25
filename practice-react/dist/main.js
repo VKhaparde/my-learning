@@ -626,7 +626,7 @@ eval("\n\nif (false) {} else {\n  module.exports = __webpack_require__(/*! ./cjs
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, __RouterContext, generatePath, matchPath, useHistory, useLocation, useParams, useRouteMatch, withRouter */
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, __RouterContext, generatePath, matchPath, useHistory, useLocation, useParams, useRouteMatch, withRouter, BrowserRouter, HashRouter, Link, NavLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -796,7 +796,7 @@ eval("var g; // This works in non-strict mode\n\ng = function () {\n  return thi
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return App; });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _clock__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./clock */ \"./src/components/clock.jsx\");\n\n\n\nclass App extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {\n  render() {\n    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_clock__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null));\n  }\n\n}\n\n//# sourceURL=webpack:///./src/components/app.jsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return App; });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _clock__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./clock */ \"./src/components/clock.jsx\");\n/* harmony import */ var _new_example__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./new-example */ \"./src/components/new-example.jsx\");\n\n\n\n\nclass App extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {\n  render() {\n    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_clock__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_new_example__WEBPACK_IMPORTED_MODULE_3__[\"default\"], null));\n  }\n\n}\n\n//# sourceURL=webpack:///./src/components/app.jsx?");
 
 /***/ }),
 
@@ -881,6 +881,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\nfunction ShowList(props) {\n  const listitems = props.numbers.map(curVal => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"li\", {\n    key: curVal.toString()\n  }, curVal));\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"ul\", null, listitems);\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (ShowList);\n\n//# sourceURL=webpack:///./src/components/list.jsx?");
+
+/***/ }),
+
+/***/ "./src/components/new-example.jsx":
+/*!****************************************!*\
+  !*** ./src/components/new-example.jsx ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return NewExample; });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nclass NewExample extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {\n  render() {\n    function formatName(name) {\n      return name.firstName + \" \" + name.lastName;\n    }\n\n    const name = {\n      firstName: \"Harper\",\n      lastName: \"Perez\"\n    };\n    const element = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"h1\", {\n      tabIndex: \"100\"\n    }, \"Hello, \", formatName(name));\n    return element;\n  }\n\n}\n\n//# sourceURL=webpack:///./src/components/new-example.jsx?");
 
 /***/ }),
 
