@@ -1,6 +1,23 @@
 import React from 'react';
 export default class NewExample extends React.Component{
-
+  constructor(props){
+    super(props);
+    this.state = {
+      time : new Date().toLocaleTimeString(),
+      count : 0
+    }
+  }
+  componentDidMount(){
+    this.timerId = setInterval(()=>this.tick(),1000);
+  }
+  componentWillUnmount(){
+    clearInterval(this.timerId);
+  }
+  tick(){
+    this.setState({
+      time: new Date().toLocaleTimeString(),
+      count : this.state.count + 1});
+  }
   render(){
     function formatName(name) {
       return name.firstName + " " + name.lastName;
@@ -21,6 +38,7 @@ export default class NewExample extends React.Component{
         {element}
         <Welcome name="Ajit Khaparde"/>
         <Comment date= {comment.date} text = {comment.text} author = {comment.author}/>
+        <h3> Current Time : {this.state.time} and Count is  {this.state.count}</h3>
       </div>
     );
   }
@@ -42,9 +60,12 @@ return (
     <div>
       <img src = {props.author.url} height="100px"></img>
       <div>Hello {props.author.name}</div>
-      <div>{props.date}</div>
+      <div>Static Time: {showTime()}</div>
       <div>{props.text}</div>
     </div>
   </div>
 );
+}
+function showTime(props){
+return <h2>{comment.date}</h2>
 }
