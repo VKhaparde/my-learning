@@ -11,9 +11,12 @@ export default class ToggleButton extends React.Component {
   }
   handleClick(event) {
     event.preventDefault();
+    console.log('event',event)
     this.setState({
       toggle: !this.state.toggle,
        text : this.state.toggle ? "ON" : "OFF"});
+    console.log('event.target',event.target);
+    event.target.style = {backgroundColor:"yellow"}
   }
   render() {
       return (
