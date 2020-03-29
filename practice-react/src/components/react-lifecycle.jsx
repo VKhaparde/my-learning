@@ -17,7 +17,7 @@ export default class LifeCycle extends React.Component {
   }
   getSnapshotBeforeUpdate(prevProps, prevState) {
     return (
-      document.getElementById('snapshot').innerHTML = "My previous favorite color was " + prevProps.favorite
+      document.getElementById('snapshot').innerHTML = "My previous favorite color was " + prevState.favorite
     );
   }
   componentDidUpdate() {
