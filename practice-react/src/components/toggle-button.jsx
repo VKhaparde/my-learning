@@ -16,11 +16,15 @@ export default class ToggleButton extends React.Component {
       toggle: !this.state.toggle,
        text : this.state.toggle ? "ON" : "OFF"});
     console.log('event.target',event.target);
-    event.target.style = {backgroundColor:"yellow"}
   }
   render() {
+    const myStyle = {
+      backgroundColor:"yellow",
+      padding:"10px",
+      border:"2px solid green"
+    };
       return (
-      <button onClick={this.handleClick} style = {{backgroundColor:"red"}}>{this.state.text}
+      <button onClick={this.handleClick} style = {myStyle}>{this.state.text}
         {/* { this.state.toggle ? "ON" : "OFF"} */}
       </button>
       );
