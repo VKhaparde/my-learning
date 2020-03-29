@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import Clock from './clock';
 import NewExample from './new-example';
 import ToggleButton from './toggle-button';
+import LifeCycle from './react-lifecycle';
 
 
 export default class App extends React.Component {
@@ -12,6 +13,7 @@ export default class App extends React.Component {
       {/* <Clock/> */}
       {/* <NewExample/> */}
       <ToggleButton/>
+      <LifeCycle favorite = "yellow"/>
       </div>
    );
   }
