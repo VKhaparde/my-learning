@@ -13,7 +13,7 @@ export default class LifeCycle extends React.Component {
   //   );
   // }
   shouldComponentUpdate() {
-    return false;
+    return true;
   }
   componentDidMount() {
     setInterval(() => this.setState({ favorite: "blue" }), 1000);
@@ -26,10 +26,21 @@ export default class LifeCycle extends React.Component {
   componentDidUpdate() {
     document.getElementById('updated').innerHTML = "My  favorite color now is  " + this.state.favorite
   }
+
+  // handleColorChange = () => {
+  //   this.setState(
+  //     { favorite: "green" }
+  //   );
+  // }
   render() {
     return (
       <div>
         <h1>My favorite color is {this.state.favorite}</h1>
+        <button onClick= {()=>{
+          this.setState(
+            { favorite: "green" }
+          );
+        }}>Click Me</button>
         <div id="snapshot"></div>
         <div id="updated"></div>
       </div>
