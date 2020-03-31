@@ -12,6 +12,9 @@ export default class LifeCycle extends React.Component {
   //     {favorite : props.favorite}
   //   );
   // }
+  shouldComponentUpdate() {
+    return false;
+  }
   componentDidMount() {
     setInterval(() => this.setState({ favorite: "blue" }), 1000);
   }
