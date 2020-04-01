@@ -16,14 +16,18 @@ export default class LoginControl extends React.Component {
     this.setState({isLoggedIn : false});
   }
   render(){
-    let isLoggedIn = this.state.isLoggedIn;
+    const isLoggedIn = this.state.isLoggedIn;
     console.log('isLoggedIn',isLoggedIn);
     let button;
     if (isLoggedIn) {
-      button = <LogOutButton onClick = {this.handleClickLogOut}/>
+      button = <LogOutButton onClick = {()=>{
+        this.setState({isLoggedIn:false})
+      }}/>
     }
     else {
-      button = <LogInButton onClick ={this.handleClickLogIn}/>
+      button = <LogInButton onClick ={()=>{
+        this.setState({isLoggedIn:true})
+      }}/>
     }
     return (
       <div>
@@ -39,13 +43,13 @@ function UserGreeting(props) {
     return <h1>Welcome User</h1>
   }
   else{
-    return <h1>Please Log In</h1>
+    return <h1>Please Sign up</h1>
   }
 }
 
 function LogInButton(props){
-  return <button onClick = {props.onClick}>Log In</button>
+  return <button  style = {{backgroundColor:"green",fontSize:"20px"}} onClick = {props.onClick}>Log In</button>
 }
 function LogOutButton(props){
-  return <button onClick= {props.onClick}>Log Out</button>
+  return <button style={{ backgroundColor: "red", fontSize: "20px"}} onClick= {props.onClick}>Log Out</button>
 }
