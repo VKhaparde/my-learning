@@ -15,16 +15,18 @@ export default class LifeCycle extends React.Component {
   shouldComponentUpdate() {
     return true;
   }
-  componentDidMount() {
-    setInterval(() => this.setState({ favorite: "blue" }), 1000);
-  }
+  // componentDidMount() {
+  //   setInterval(() => this.setState({ favorite: "blue" }), 1000);
+  // }
   getSnapshotBeforeUpdate(prevProps, prevState) {
     return (
       document.getElementById('snapshot').innerHTML = "My previous favorite color was " + prevState.favorite
     );
   }
-  componentDidUpdate() {
-    document.getElementById('updated').innerHTML = "My  favorite color now is  " + this.state.favorite
+  componentDidUpdate(prevProps,prevState,snapshot) {
+    document.getElementById('updated').innerHTML =
+    "My  favorite color now is  " + this.state.favorite +
+    "  snapshot  "+snapshot ;
   }
 
   // handleColorChange = () => {
