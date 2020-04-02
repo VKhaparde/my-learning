@@ -6,6 +6,8 @@ import ToggleButton from './toggle-button';
 import LifeCycle from './react-lifecycle';
 import LoginControl from './login-control';
 import MailBox from './mailbox-inlineif';
+import Page from './page-warning';
+
 
 
 export default class App extends React.Component {
@@ -19,6 +21,7 @@ export default class App extends React.Component {
       <LifeCycle favorite = "yellow"/>
       <LoginControl />
       <MailBox mail = {messages}/>
+      <Page />
       </div>
    );
   }
