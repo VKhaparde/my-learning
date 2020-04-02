@@ -9,13 +9,13 @@ export default class NumberList extends React.Component {
     const listItem = numbers.map((number) => {
       return <ListItem key={number.toString()} value={number * 100}></ListItem>
     });
-    const sidebar = props.posts.map((post) => {
-      <h3 key={post.id}>{post.title}</h3>
+    const sidebar = this.props.posts.map((post) => {
+      return <li key={post.id}>{post.title}</li>;
     });
-    const content = props.posts.map((post) => {
+    const content = this.props.posts.map((post) => {
       return (
         <div key={post.id}>
-          <h3>{post.title}</h3>
+          <h3>{post.id}. {post.title}</h3>
           <h4>{post.text}</h4>
         </div>
       );
