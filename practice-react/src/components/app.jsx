@@ -7,12 +7,15 @@ import LifeCycle from './react-lifecycle';
 import LoginControl from './login-control';
 import MailBox from './mailbox-inlineif';
 import Page from './page-warning';
+import NumberList from './list-keydemo';
 
 
 
 export default class App extends React.Component {
   render() {
     const messages = ["React","Angular","Vue"];
+    const postsArray = [{id : 1,title :"React",text:"React is JS Library developed by FaceBook"},
+                  {id:2 , title :"Angular",text:"Angular is JS Framework developed by Google"}]
     return (
       <div>
       {/* <Clock/> */}
@@ -22,6 +25,7 @@ export default class App extends React.Component {
       <LoginControl />
       <MailBox mail = {messages}/>
       <Page />
+      <NumberList posts = {postsArray}/>
       </div>
    );
   }
