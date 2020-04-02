@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<script>
+ // This is the solution if the string has any non alpha numeric characters,
+ //that needs to be replaced to compare the strings
+ //the regex pattern /[^a-zA-Z0-9_] needs to be replaced with ''
+ //regex pattern can also be /[\W_]/g
+function palindrome(str){
+  // str = str.replace(/[\W_]/g,'').toLowerCase();
+  str = str.replace(/[^a-zA-Z0-9_]/g,"").toLowerCase();
+  console.log(str)
+  if(str === str.split("").reverse().join("")){
+    return true;
+  }
+  return false;
+}
+console.log(palindrome("RACE CAR"));
+console.log(palindrome("_eye_"));
+
+</script>
+<body>
+
+</body>
+</html>
