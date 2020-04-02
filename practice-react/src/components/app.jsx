@@ -5,10 +5,12 @@ import NewExample from './new-example';
 import ToggleButton from './toggle-button';
 import LifeCycle from './react-lifecycle';
 import LoginControl from './login-control';
+import MailBox from './mailbox-inlineif';
 
 
 export default class App extends React.Component {
   render() {
+    const messages = ["React","Angular","Vue"];
     return (
       <div>
       {/* <Clock/> */}
@@ -16,6 +18,7 @@ export default class App extends React.Component {
       <ToggleButton/>
       <LifeCycle favorite = "yellow"/>
       <LoginControl />
+      <MailBox mail = {messages}/>
       </div>
    );
   }

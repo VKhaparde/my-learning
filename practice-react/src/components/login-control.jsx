@@ -33,6 +33,10 @@ export default class LoginControl extends React.Component {
       <div>
         <UserGreeting isLoggedIn={isLoggedIn}/>
         {button}
+        {/* {
+          isLoggedIn ? <LogOutButton onClick={this.handleClickLogOut}/> :
+          <LogInButton onClick={this.handleClickLogIn}/>
+        } */}
       </div>
     );
   }
@@ -40,10 +44,10 @@ export default class LoginControl extends React.Component {
 
 function UserGreeting(props) {
   if (props.isLoggedIn) {
-    return <h1>Welcome User</h1>
+    return <h1 style={{ color : "blue"}}>Welcome User</h1>
   }
   else{
-    return <h1>Please Sign up</h1>
+    return <h1 style={{ color: "blue" }}>Please Sign up</h1>
   }
 }
 
