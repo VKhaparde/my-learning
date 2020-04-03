@@ -22,6 +22,21 @@ function palindrome(str){
 }
 console.log(palindrome("RACE CAR"));
 console.log(palindrome("_eye_"));
+  'use strict';
+  let printNumTwo;
+
+  for ( let i = 0; i < 3; i++) {
+    console.log('i in the for loop',i);
+    if (i === 2) {
+      printNumTwo = function () {
+        console.log('i in function ',i)
+        return i;
+      };
+    }
+  }
+  console.log(printNumTwo());
+  // returns 2
+  console.log(i);
 
 </script>
 <body>
