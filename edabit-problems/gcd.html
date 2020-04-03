@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+    function gcd(arr) {
+      let resultArray = [];
+      let divisor = true;
+      for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr.length; j++) {
+          if (arr[j] % arr[i] !== 0) {
+            divisor = false;
+            break;
+          }
+          divisor = true;
+        }
+        if (divisor) {
+          resultArray.push(arr[i]);
+        }
+      }
+      console.log('resultArray', resultArray);
+      resultArray.sort((a, b) => { return b - a });
+      return resultArray[0]
+    }
+    console.log(gcd([2, 4, 6, 8, 10]));
+
+    function cellComplete(states, days) {
+      console.log(states);
+      let statesR = [];
+      while (days > 0) {
+        for (let i = 0; i < states.length; i++) {
+          if (i === 0) {
+            if (states[i + 1] === 0) {
+              statesR[i] = 0;
+            }
+            else {
+              statesR[i] = 1;
+            }
+          }
+          else if (i === states.length - 1) {
+            if (states[i - 1] === 0) {
+              statesR[i] = 0;
+            }
+            else {
+              statesR[i] = 1;
+            }
+          }
+          else if (states[i + 1] === 0 && states[i - 1] === 0 || states[i + 1] === 1 && states[i - 1] === 1) {
+            statesR[i] = 0;
+          }
+          else {
+            statesR[i] = 1;
+          }
+        }
+        states = statesR;
+        statesR = [];
+        days = days - 1;
+      }
+
+      console.log("statesR", statesR)
+      return states;
+    }
+    console.log(cellComplete([1, 0, 0, 0, 0, 1, 0, 0], 1));
+    //01001010
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
