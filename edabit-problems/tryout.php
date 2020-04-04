@@ -48,4 +48,15 @@ var_dump(isset($var));
 var_dump(empty($var));
 var_dump(is_null($var));
 
+function changeValue($y){
+  $y = $y + 5;
+}
+$myNum = 8;
+changeValue($myNum);
+echo $myNum ;
+
+$function = function () {
+  return 1;
+};
+echo get_class($function);
 ?>
