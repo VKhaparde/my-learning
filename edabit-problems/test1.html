@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    #jjj{
+      width: 100px;
+      background-color: brown;
+      margin: 20px;
+      padding:20px;
+      border:1px;
+    }
+  </style>
+  <script>
+    var x = 2;
+    var y = 4;
+    if ((y > x || y++ === 4) && ++y === 5) {
+      console.log('x', x);
+      console.log('y', y);
+      x = 1;
+    }
+    else {
+      x = 4;
+    }
+    console.log('x', x);
+    console.log('y', y);
+
+    console.log(typeof a);
+    console.log(typeof b);
+    function a() { }
+    var b = function () { };
+
+    var a = ["aaa", 'bbb', 'ccc'];
+    var b = a;
+    var c = a.slice();
+    a.push("dddd");
+    console.log(b, c);
+
+    var x = 1;
+    function foo() {
+      var x = 3;
+      console.log(x);
+    }
+    foo();
+    console.log(x);
+    function bar() {
+      var x = 4;
+      console.log(x);
+    }
+    bar();
+    console.log(x);
+
+    function f(x){
+      x+=1;
+    }
+    function g(x){
+      x.value *= 5;
+    }
+    var arti;
+    var b=1;
+    var c= {value:2};
+    var d =c ;
+    f(a);
+    f(b);
+    g(d);
+    console.log(arti, b, c.value, d.value);
+
+    function foo1(a,b,c){
+      a++;
+      b= "new string";
+      c["key"]= "new value";
+      // c = { "key": "new value" }
+    }
+    var a=1,b="old string"
+    var c={"key":"old value"};
+    foo1(a,b,c);
+    console.log(a,b,c);
+    (function setup(){
+      function handleClick(){
+        alert("clicked");
+      }
+    })();
+    // function handleClick() {
+    //   console.log("hello")
+    //     alert("clicked");
+    //   }
+    
+  </script>
+</head>
+
+<body>
+<input type="button" value ="clickme" onClick = "handleClick">
+</body>
+<div style="margin: 20px;">Vandana</div style="margin: 20px;">
+<div style="margin: 10px;">Poonam
+<div id="jjj">
+  HEllo jsdhfkjdfhlghfgl
+</div></div>
+</html>
