@@ -7,7 +7,17 @@
   <title>Document</title>
   <script>
   var lengthOfLastWord = function (s) {
-
+    if(s=== " "){
+      return 0;
+    }
+    let spaceIndex = s.lastIndexOf(" ");
+    console.log(spaceIndex);
+    let lastWord = s.slice(spaceIndex+1);
+    console.log(lastWord);
+    if(lastWord.length === 0){
+      return s.slice(0,spaceIndex + 1).length;
+    }
+    return lastWord.length;
     };
   console.log(lengthOfLastWord("Hello World"));
   </script>
