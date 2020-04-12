@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+  function topNCompetitors(numCompetitors, topNCompetitors, competitors,
+      numReviews, reviews) {
+      // WRITE YOUR CODE HERE
+        let ratingObj = {};
+        for(let i=0;i<competitors.length;i++){
+          let count =0;
+          for(let j=0;j<reviews.length;j++){
+            if(reviews[j].includes(competitors[i])){
+              count++;
+            }
+          }
+          ratingObj[competitors[i]]= count;
+        }
+        console.log("ratingObj", ratingObj);
+        const entries = Object.entries(ratingObj)
+    console.log(entries);
+    }
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>
