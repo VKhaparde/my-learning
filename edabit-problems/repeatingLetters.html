@@ -8,10 +8,12 @@
   <script>
     function doubleChar(str) {
      let strArray = str.split("");
-    let resultArray = [];
-      strArray.map((currentVal)=>{
-        
-      })
+     console.log(strArray);
+    let resultArray = strArray.map((currentVal,index)=>{
+        strArray[index+1] = currentVal;
+        return strArray[index];
+      });
+      return resultArray;
       }
     console.log(doubleChar("Hello World!"));
   </script>
