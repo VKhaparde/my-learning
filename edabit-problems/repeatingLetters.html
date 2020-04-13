@@ -10,11 +10,12 @@
      let strArray = str.split("");
      console.log(strArray);
     let resultArray =[];
-     strArray.map((currentVal,index)=>{
-      resultArray.push(currentVal);
-      resultArray.push(currentVal);
-    });
-      return resultArray.join("");
+    return strArray.map((currentVal)=>{
+      // resultArray.push(currentVal);
+      // resultArray.push(currentVal);
+      return currentVal+currentVal;
+    }).join("");
+      // return resultArray.join("");
       }
     console.log(doubleChar("Hello World!"));
   </script>
