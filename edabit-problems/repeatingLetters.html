@@ -9,11 +9,12 @@
     function doubleChar(str) {
      let strArray = str.split("");
      console.log(strArray);
-    let resultArray = strArray.map((currentVal,index)=>{
-        strArray[index+1] = currentVal;
-        return strArray[index];
-      });
-      return resultArray;
+    let resultArray =[];
+     strArray.map((currentVal,index)=>{
+      resultArray.push(currentVal);
+      resultArray.push(currentVal);
+    });
+      return resultArray.join("");
       }
     console.log(doubleChar("Hello World!"));
   </script>
