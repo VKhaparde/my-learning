@@ -18,7 +18,9 @@
     let index = 0;
     while(index < arr.length){
       // console.log(copiedArray.splice(0, len));
+      //You can use splice() or slice() method to do this.
       chunkedArray.push(copiedArray.splice(0,len).reverse());
+      // chunkedArray.push(copiedArray.slice(index,index+len).reverse());
       index+=len;
     }
     return chunkedArray.flat();
