@@ -9,9 +9,28 @@
     function seqLevel(arr) {
       let resultArray = [];
       let element;
-    for(let i=0;i<arr.length;i++){
+      let count ;
+    for(let i=0;i<arr.length - 1;i++){
       element = arr[i+1] - arr[i];
+      resultArray.push(element);
     }
+    console.log(resultArray);
+    let arrayType = resultArray.every((currentVal,index,resultArray)=>{
+      currentVal === resultArray[0];
+    });
+    if(!arrayType){
+      let newArray = resultArray;
+      count++;
+      seqLevel(newArray);
+
+    }
+      if(count === 1){
+      console.log("The array is quadratic");
+      }
+      else if(count===2){
+        console.log("The array is cubic");
+      }
+
       }
       console.log(seqLevel([4, 14, 40, 88, 164]));
   </script>
