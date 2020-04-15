@@ -18,21 +18,23 @@
     let arrayType = resultArray.every((currentVal,index,resultArray)=>{
       currentVal === resultArray[0];
     });
-    if(!arrayType){
+    if(arrayType){
+      return "The array is linear.";
+    }
+    else{
       let newArray = resultArray;
       count++;
       seqLevel(newArray);
-
-    }
-      if(count === 1){
-      console.log("The array is quadratic");
+      if (count === 1) {
+        console.log("The array is quadratic");
       }
-      else if(count===2){
+      else if (count === 2) {
         console.log("The array is cubic");
       }
-
+    }
       }
       console.log(seqLevel([4, 14, 40, 88, 164]));
+      console.log(seqLevel([1,2,3,4,5]));
   </script>
 </head>
 <body>
