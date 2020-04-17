@@ -6,10 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <script>
-    function seqLevel(arr) {
+    function seqLevel(arr,n=0) {
       let resultArray = [];
       let element;
-      let count ;
+      let count=n;
     for(let i=0;i<arr.length - 1;i++){
       element = arr[i+1] - arr[i];
       resultArray.push(element);
@@ -34,11 +34,11 @@
     else{
       let newArray = resultArray;
       count++;
-      seqLevel(newArray);
+      seqLevel(newArray,count);
     }
       }
-      // console.log(seqLevel([4, 14, 40, 88, 164]));
-      // console.log(seqLevel([1,2,3,4,5]));
+      console.log(seqLevel([4, 14, 40, 88, 164]));
+      console.log(seqLevel([1,2,3,4,5]));
       console.log(seqLevel([3,6,10,15,21]));
   </script>
 </head>
