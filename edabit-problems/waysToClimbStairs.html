@@ -27,8 +27,17 @@
       }
       return sum;
     }
-    function getDecimalPlaces()
-    console.log(sumOfMissingNumbers([10, 7, 5, 3, 1]));
+  console.log(sumOfMissingNumbers([10, 7, 5, 3, 1]));
+
+    function getDecimalPlaces(num){
+      num = num.split("");
+      if(!num.includes(".")){
+        return 0;
+      }
+     let decimalIndex =  num.indexOf(".");
+     return num.slice(decimalIndex+1).length;
+    }
+    console.log(getDecimalPlaces("45.890"));
   </script>
 </head>
 <body>
