@@ -38,9 +38,25 @@
      return num.slice(decimalIndex+1).length;
     }
     console.log(getDecimalPlaces("45.890"));
+    function sumDigProd(...args) {
+      let sum = args.reduce((prev,current)=>{
+        return prev + current;
+      });
+      if (sum <=9){
+        return sum;
+      }
+      else{
+       sum =  sum.split("");
+      let result =  sum.reduce((acc,current)=>{
+         return acc + current;
+       })
+       return result;
+      }
+      }
+      console.log(sumDigProd(2, 3, 4, 5));
   </script>
 </head>
 <body>
-
+Create a function that takes numbers as arguments, adds them together, and returns the product of digits until the answer is only 1 digit long.
 </body>
 </html>
