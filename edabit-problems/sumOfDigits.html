@@ -6,9 +6,35 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <script>
-  function sumDigProd() {
-
+  function sumDigProd(...args) {
+    debugger;
+    if(args === 0){
+      return 0;
     }
+  let sum =  args.reduce((acc,current)=>{
+      return acc + current ;
+    });
+    console.log("sum",sum);
+    if(sum <= 9){
+      return sum;
+    }
+    else{
+      result(sum);
+    }
+    const result = (sum)=>{
+      sum.toString().split("").reduce((acc,current)=>{
+      return parseInt(acc) * parseInt(current) ;
+    })
+  }
+  console.log('result',result);
+    if(result <= 9){
+      return result;
+    }
+    else{
+      product(result);
+    }
+    }
+    console.log(sumDigProd(1,2,3,4,5,6));
   </script>
 </head>
 <body>
