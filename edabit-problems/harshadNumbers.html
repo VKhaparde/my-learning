@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+  function harshad(n){
+    // debugger;
+    let harshadArray = [];
+    let resultArray = [];
+    if(n<=10){
+      resultArray[0]=10;
+      resultArray[1]=n;
+      return resultArray;
+    }
+
+    for(let number = n-3; number<n+4 ; number++){
+      let sum = number.toString().split("").reduce((acc, current) => {
+        return parseInt(acc) + parseInt(current);
+      });
+      if (number % sum === 0) {
+        harshadArray.push(number);
+      }
+      
+    }
+    console.log("harshadArray",harshadArray);
+    if(harshadArray.length === 0 || (harshadArray.length === 1 && !harshadArray.includes(n))){
+      return [0,0];
+    }
+    else if(harshadArray.length === 1 || harshadArray === [n]){
+      return [1,1];
+    }
+    else{
+      resultArray[0] = harshadArray.length;
+      resultArray[1] = harshadArray.indexOf(n) + 1;
+      return resultArray;
+    }
+  }
+  console.log(harshad(5));
+  console.log(harshad(133));
+  console.log(harshad(72));
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>
