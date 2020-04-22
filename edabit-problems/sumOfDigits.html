@@ -7,34 +7,32 @@
   <title>Document</title>
   <script>
   function sumDigProd(...args) {
-    debugger;
     if(args === 0){
       return 0;
     }
   let sum =  args.reduce((acc,current)=>{
       return acc + current ;
     });
-    console.log("sum",sum);
+
     if(sum <= 9){
       return sum;
     }
-    else{
-      result(sum);
+  let result = sum;
+
+    while(result > 9){
+      result = findProduct(result);
     }
-    const result = (sum)=>{
-      sum.toString().split("").reduce((acc,current)=>{
-      return parseInt(acc) * parseInt(current) ;
-    })
-  }
-  console.log('result',result);
-    if(result <= 9){
-      return result;
+    return result;
     }
-    else{
-      product(result);
-    }
-    }
+    function findProduct(num) {
+       return  num.toString().split("").reduce((acc, current) => {
+          console.log(parseInt(acc) * parseInt(current));
+          return parseInt(acc) * parseInt(current);
+        });
+      }
     console.log(sumDigProd(1,2,3,4,5,6));
+    console.log(sumDigProd(8, 16, 89, 3))
+    console.log(sumDigProd(26, 497, 62, 841));
   </script>
 </head>
 <body>
