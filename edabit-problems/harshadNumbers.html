@@ -47,7 +47,34 @@
   console.log(harshad(5));
   console.log(harshad(133));
   console.log(harshad(72));
-
+  
+  Number.prototype.isHarshad = function () {
+      let sum = this.toString().split("").reduce((acc, current) => {
+        return parseInt(acc) + parseInt(current)
+      });
+      if (this % sum === 0) {
+        return true;
+      }
+      return false;
+    }
+ function harshadCluster(n){
+   let i=n-1, j=n+1,cluster=[];
+  if(n.isHarshad()){
+    cluster.push(n);
+  }
+  else{
+    return [0,0];
+  }
+  while(i.isHarshad() || j.isHarshad()){
+    if(i.isHarshad()){ cluster.push(i); i-=1;}
+    if(j.isHarshad()){cluster.push(j); j+=1;}
+  }
+  cluster.sort((a,b)=>{return a-b});
+  return [cluster.length,cluster.indexOf(n) + 1];
+ }
+  console.log(harshadCluster(5));
+  console.log(harshadCluster(133));
+  console.log(harshadCluster(72));
   </script>
 </head>
 <body>
