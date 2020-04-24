@@ -8,6 +8,8 @@ import LoginControl from './login-control';
 import MailBox from './mailbox-inlineif';
 import Page from './page-warning';
 import NumberList from './list-keydemo';
+import Forms from './forms';
+
 
 
 
@@ -20,12 +22,13 @@ export default class App extends React.Component {
       <div>
       {/* <Clock/> */}
       {/* <NewExample/> */}
-      <ToggleButton/>
+      {/* <ToggleButton/>
       <LifeCycle favorite = "yellow"/>
       <LoginControl />
       <MailBox mail = {messages}/>
       <Page />
-      <NumberList posts = {postsArray}/>
+      <NumberList posts = {postsArray}/> */}
+      <Forms />
       </div>
    );
   }
