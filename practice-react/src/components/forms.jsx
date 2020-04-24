@@ -14,12 +14,12 @@ export default class Forms extends React.Component{
     const newState = {};
     console.log("event.target.name",event.target.name);
     console.log("event.target.value",event.target.value);
-    // this.setState({
-    //   event.target.name  :  event.target.value
-    // });
-    newState[event.target.name] = newState[event.target.value];
-    this.setState(newState);
-    console.log('My new state',this.state);
+    this.setState({
+      [event.target.name]  :  event.target.value
+    });
+    // newState[event.target.name] = event.target.value;
+    // this.setState(newState);
+    // console.log('My new state',this.state);
   }
   handleSubmit(){
     console.log("this.state", this.state);
@@ -28,9 +28,10 @@ export default class Forms extends React.Component{
   render(){
     return (
       <div>
-        <form action="" onSubmit={()=>{
+        <form action="" onSubmit={(event)=>{
+          console.log("event",event);
           console.log("this.state", this.state);
-          alert(`You have entered a name ${this.state.name}`);
+          alert(`You have entered a name ${this.state.name} and the essay ${this.state.essay}`);
           event.preventDefault();
         }}>
           <label htmlFor="">Enter any name: </label>
