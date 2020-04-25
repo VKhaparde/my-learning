@@ -9,6 +9,7 @@ import MailBox from './mailbox-inlineif';
 import Page from './page-warning';
 import NumberList from './list-keydemo';
 import Forms from './forms';
+import TemperatureCalculator from './temperatureCalc';
 
 
 
@@ -29,6 +30,7 @@ export default class App extends React.Component {
       <Page />
       <NumberList posts = {postsArray}/> */}
       <Forms />
+      <TemperatureCalculator/>
       </div>
    );
   }

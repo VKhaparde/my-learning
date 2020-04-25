@@ -18,12 +18,15 @@ export default class TemperatureCalculator extends React.Component {
             })
           }} />
         </fieldset>
-        <BoilingVerdict />
+        <BoilingVerdict celsius = {this.state.temperature}/>
       </div>
     );
   }
 }
 
 function BoilingVerdict(props){
-  
+  if(props.celsius >= 100){
+    return <div>Water is boiling.</div>
+  }
+  return <div>Water is not boiling.</div>
 }
