@@ -30,6 +30,10 @@ function BoilingVerdict(props) {
 class TemperatureInput extends React.Component{
   constructor(props){
     super(props);
+    this.handleChange = this.handleChange.bind(this);
+  }
+  handleChange(e){
+    this.props.onTempChange(e.target.value);
   }
   render(){
     const scale = this.props.scale;
@@ -37,9 +41,8 @@ class TemperatureInput extends React.Component{
     return(
       <fieldset>
         <label htmlFor="">Enter temperature in {scale}.</label>
-        <input type="text" name="" id="" onChange={(event) => {
-            this.props.onTempChange(event.target.value);
-        }} />
+        <input type="text" name="" id="" onChange={
+          this.handleChange} />
       </fieldset>
     );
   }
