@@ -1,6 +1,5 @@
 import React from 'react';
-
-
+import ReactDOM from 'react-dom';
 function toCelsius(fahrenheit){
   return (fahrenheit  - 32) * 5/9 ;
 }
@@ -36,12 +35,13 @@ class TemperatureInput extends React.Component{
     this.props.onTempChange(e.target.value);
   }
   render(){
+    console.log('props',this.props)
     const scale = this.props.scale;
     const temperature = this.props.temperature;
     return(
       <fieldset>
         <label htmlFor="">Enter temperature in {scale}.</label>
-        <input type="text" name="" id="" onChange={
+        <input value = {temperature} onChange={
           this.handleChange} />
       </fieldset>
     );
@@ -58,16 +58,19 @@ export default class TemperatureCalculator extends React.Component {
     this.handleCelsiusChange = this.handleCelsiusChange.bind(this);
     this.handleFahrenheitChange = this.handleFahrenheitChange.bind(this);
   }
-  handleCelsiusChange(temperature){
+  handleCelsiusChange(temp){
+    console.log("temp",temp);
     this.setState({
-      scale  : "celsius",
-      temperature
+      temperature:temp,
+      scale: "celsius"
     });
   }
-  handleFahrenheitChange(temperature){
+  handleFahrenheitChange(temp){
+    console.log("temp", temp);
     this.setState({
-      scale : "fahrenheit",
-      temperature
+      temperature:temp,
+      scale: "fahrenheit"
+
     });
   }
   render() {
