@@ -1,9 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 class Search extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     return (
       <form action="">
@@ -15,7 +12,7 @@ class Search extends React.Component {
         <p>
           <input type="checkbox" value={this.props.inStockOnly}
             onChange={(event) => {
-              this.props.handleInStockOnlyChange(event.target.value);
+              this.props.inStockOnlyChange(event.target.value);
             }} />
           {" "}
           Only show products in stock
@@ -25,23 +22,53 @@ class Search extends React.Component {
   }
 }
 
+class ProductRow extends React.Component {
+  render() {
+    return(
+      <tr style={{ "border": "2px solid brown" }}>
+        <td>{this.props.name}</td>
+        <td>{this.props.price}</td>
+      </tr>
+    );
+  }
+}
+
 class ProductTable extends React.Component {
   render() {
+    console.log('props', this.props);
     const products = this.props.products;
     let filterText = this.props.filterText;
     let inStockOnly = this.props.inStockOnly;
-    let rows = products.filter((current)=>{
-      return current.name.includes('filterText');
-    })
+    let rows = [];
+    if(!inStockOnly){
+    rows = products.filter((current) =>
+      current.name.includes(filterText)
+    );
+    }
+    else if(inStockOnly){
+      rows = products.filter((current) =>
+        current.name.includes(filterText) && current.stocked
+      );
+    }
+    console.log('rows',rows);
     return (
-      <table style = {{"border" : "2px solid brown"}}>
+      <table style={{ "border": "2px solid brown" }}>
         <thead>
           <tr>
             <th>Name</th>
             <th>Price</th>
           </tr>
         </thead>
-        <tbody>{}</tbody>
+        <tbody >
+          {rows.map((currentVal,index)=>{
+            return (<ProductRow key = {index}
+                        name = {currentVal.name}
+                        stocked = {currentVal.stocked}
+                        price = {currentVal.price}
+                        category = {currentVal.category} />);
+          })
+          }
+          </tbody>
       </table>
     );
   }
@@ -52,7 +79,7 @@ export default class FilterableProductTable extends React.Component {
     super(props);
     this.state = {
       inStockOnly: false,
-      filterText: " "
+      filterText: ""
     };
     this.products = [
       { category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football' },
@@ -71,8 +98,9 @@ export default class FilterableProductTable extends React.Component {
     });
   }
   handleInStockOnlyChange(newValue) {
+    console.log('newValue of InStock',newValue);
     this.setState({
-      inStockOnly: newValue
+      inStockOnly: !this.state.inStockOnly
     });
   }
   render() {
