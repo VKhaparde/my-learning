@@ -24,15 +24,25 @@ class Search extends React.Component {
 
 class ProductRow extends React.Component {
   render() {
-    return(
+    const name = this.props.stocked ? this.props.name : <span style={{ "color": "red" }}>{this.props.name}</span>;
+    console.log('name',name)
+    return (
       <tr style={{ "border": "2px solid brown" }}>
-        <td>{this.props.name}</td>
+        <td>{name}</td>
         <td>{this.props.price}</td>
       </tr>
     );
   }
 }
-
+class ProductCategoryRow extends React.Component {
+  render() {
+    return (
+      <tr>
+        <th colSpan="2">{this.props.category}</th>
+      </tr>
+    );
+  }
+}
 class ProductTable extends React.Component {
   render() {
     console.log('props', this.props);
@@ -40,35 +50,62 @@ class ProductTable extends React.Component {
     let filterText = this.props.filterText;
     let inStockOnly = this.props.inStockOnly;
     let rows = [];
-    if(!inStockOnly){
-    rows = products.filter((current) =>
-      current.name.includes(filterText)
-    );
-    }
-    else if(inStockOnly){
-      rows = products.filter((current) =>
-        current.name.includes(filterText) && current.stocked
+    let prevCategory = null;
+    products.forEach((currentVal, index) => {
+      if (currentVal.name.indexOf(filterText) === -1) {
+        return;
+      }
+      if (inStockOnly && !currentVal.stocked) {
+        return;
+      }
+      if (currentVal.category !== prevCategory) {
+        rows.push(
+          <ProductCategoryRow key={currentVal.category}
+            category={currentVal.category} />
+        );
+      }
+      rows.push(
+        <ProductRow
+          key={index}
+          name={currentVal.name}
+          stocked={currentVal.stocked}
+          price={currentVal.price}
+          category={currentVal.category} />
       );
-    }
-    console.log('rows',rows);
+      prevCategory = currentVal.category
+    })
+    // if (!inStockOnly) {
+    //   rows = products.filter((current) =>
+    //     current.name.includes(filterText)
+    //   );
+    // }
+    // else if (inStockOnly) {
+    //   rows = products.filter((current) =>
+    //     current.name.includes(filterText) && current.stocked
+    //   );
+    // }
+    console.log('rows', rows);
     return (
-      <table style={{ "border": "2px solid brown" }}>
+      <table style={{ "border": "5px solid brown" }}>
         <thead>
           <tr>
             <th>Name</th>
             <th>Price</th>
           </tr>
         </thead>
-        <tbody >
-          {rows.map((currentVal,index)=>{
-            return (<ProductRow key = {index}
-                        name = {currentVal.name}
-                        stocked = {currentVal.stocked}
-                        price = {currentVal.price}
-                        category = {currentVal.category} />);
+        <tbody>
+          {/* {rows.map((currentVal, index) => {
+            return (
+            <ProductRow key={index}
+              name={currentVal.name}
+              stocked={currentVal.stocked}
+              price={currentVal.price}
+              category={currentVal.category} />
+            );
           })
-          }
-          </tbody>
+          } */}
+          {rows}
+        </tbody>
       </table>
     );
   }
@@ -98,7 +135,7 @@ export default class FilterableProductTable extends React.Component {
     });
   }
   handleInStockOnlyChange(newValue) {
-    console.log('newValue of InStock',newValue);
+    console.log('newValue of InStock', newValue);
     this.setState({
       inStockOnly: !this.state.inStockOnly
     });
