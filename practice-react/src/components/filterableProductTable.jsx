@@ -47,12 +47,13 @@ class ProductTable extends React.Component {
   render() {
     console.log('props', this.props);
     const products = this.props.products;
-    let filterText = this.props.filterText;
+    let filterText = this.props.filterText.toLowerCase();
     let inStockOnly = this.props.inStockOnly;
     let rows = [];
     let prevCategory = null;
     products.forEach((currentVal, index) => {
-      if (currentVal.name.indexOf(filterText) === -1) {
+      let nameLower = currentVal.name.toLowerCase();
+      if (nameLower.indexOf(filterText) === -1) {
         return;
       }
       if (inStockOnly && !currentVal.stocked) {
