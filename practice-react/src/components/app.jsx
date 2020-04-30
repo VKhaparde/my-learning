@@ -11,6 +11,7 @@ import NumberList from './list-keydemo';
 import Forms from './forms';
 import TemperatureCalculator from './temperatureCalc';
 import FilterableProductTable from './filterableProductTable';
+import BMICalculator from './bmicalc';
 
 
 
@@ -30,10 +31,11 @@ export default class App extends React.Component {
       <MailBox mail = {messages}/>
       <Page />
       <NumberList posts = {postsArray}/> */}
-      <Forms />
-      <br/>
+      {/* <Forms />
+      <br/> */}
       <TemperatureCalculator/>
       <FilterableProductTable/>
+      <BMICalculator />
       </div>
    );
   }
