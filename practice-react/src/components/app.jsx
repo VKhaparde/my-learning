@@ -12,6 +12,7 @@ import Forms from './forms';
 import TemperatureCalculator from './temperatureCalc';
 import FilterableProductTable from './filterableProductTable';
 import BMICalculator from './bmicalc';
+import Chronometer from './chronometer';
 
 
 
@@ -33,9 +34,10 @@ export default class App extends React.Component {
       <NumberList posts = {postsArray}/> */}
       {/* <Forms />
       <br/> */}
-      <TemperatureCalculator/>
-      <FilterableProductTable/>
+      {/* <TemperatureCalculator/>
+      <FilterableProductTable/> */}
       <BMICalculator />
+      <Chronometer/>
       </div>
    );
   }

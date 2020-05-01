@@ -79,7 +79,7 @@ export default class BMICalculator extends React.Component {
                 this.handleChange(event);
               }} />
           </label>
-          <label htmlFor="">Weight(Kg)
+          <label htmlFor="">Weight(kg)
           <input type="text" name="weight" value={this.state.weight}
               onChange={event => {
                 console.log(event.target.value);
