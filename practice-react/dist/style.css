@@ -6,3 +6,12 @@
   padding: 15px;
   margin: 15px;
 }
+
+.bmiClass input{
+  height: 20%;
+  width:50%;
+  background-color: rgb(180, 180, 207);
+  padding: 20px;
+  margin: 10px;
+  font-size: large;
+}
