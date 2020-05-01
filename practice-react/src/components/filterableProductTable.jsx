@@ -143,7 +143,7 @@ export default class FilterableProductTable extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div style={{ "backgroundColor": "powderblue" }}>
         <h3>Filterable ProductTable Demo </h3>
         <Search
           filterText={this.state.filterText}

@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 function DetermineHealthLevel(props) {
   let message;
   console.log('props', props)
-  if (props.bmi === null) {
+  if (props.bmi === null || props.bmi === "") {
     message = ""
   }
   else if (props.bmi <= 18.5) {
@@ -64,7 +64,7 @@ export default class BMICalculator extends React.Component {
   }
   render() {
     return (
-      <div style={{ "backgroundColor": "magenta" }} className="bmiClass">
+      <div style={{ "backgroundColor": "lavender" }} className="bmiClass">
         <h2>BMI Calculator</h2>
         <h3>Body Mass Index is : {this.state.bmi}</h3>
         <DetermineHealthLevel bmi={this.state.bmi} />
@@ -90,7 +90,8 @@ export default class BMICalculator extends React.Component {
           <input type="button" value="Reset" onClick={() => {
             this.setState({
               height: "",
-              weight: ""
+              weight: "",
+              bmi: null
             })
           }} />
 
