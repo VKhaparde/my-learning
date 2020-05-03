@@ -43,9 +43,9 @@ export default class Chronometer extends React.Component {
     });
   };
   render() {
-    // console.log("Date.now()", Date.now());
-    // const { timerTime } = this.state;
-    // console.log('timerTime', timerTime);
+    console.log("Date.now()", Date.now());
+    const { timerTime } = this.state;
+    console.log('timerTime', timerTime);
     let centiseconds = ("0" + (Math.floor(timerTime / 10) % 100)).slice(-2);
     let seconds = ("0" + (Math.floor(timerTime / 1000) % 60)).slice(-2);
     let minutes = ("0" + (Math.floor(timerTime / 60000) % 60)).slice(-2);
