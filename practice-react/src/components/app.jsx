@@ -13,6 +13,7 @@ import TemperatureCalculator from './temperatureCalc';
 import FilterableProductTable from './filterableProductTable';
 import BMICalculator from './bmicalc';
 import Chronometer from './chronometer';
+import FragmentsDemo from './fragments-demo';
 
 
 
@@ -36,8 +37,9 @@ export default class App extends React.Component {
       <br/> */}
       {/* <TemperatureCalculator/>
       <FilterableProductTable/> */}
-      <BMICalculator />
-      <Chronometer/>
+      {/* <BMICalculator />
+      <Chronometer/> */}
+      <FragmentsDemo posts={postsArray}/>
       </div>
    );
   }
