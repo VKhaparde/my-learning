@@ -1,8 +1,8 @@
 import React, { createContext } from 'react';
 
-const ThemeContext = React.createContext();
+export const ThemeContext = createContext();
 
-export default class ThemeProvider extends React.Component {
+ export default class ThemeContextProvider extends React.Component {
   state = {
     isLightTheme: true,
     light: {
@@ -16,9 +16,14 @@ export default class ThemeProvider extends React.Component {
       bg: '#555'
     }
   }
+  toggleTheme = ()=>{
+    this.setState({
+      isLightTheme : !this.state.isLightTheme
+    })
+  }
   render() {
     return (
-      <ThemeContext.Provider value = {{...this.state}}>
+      <ThemeContext.Provider value = {{...this.state, toggleTheme : this.toggleTheme}}>
         {this.props.children}
       </ThemeContext.Provider>
     );
