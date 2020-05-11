@@ -38,3 +38,14 @@ body {
   border-radius: 12px;
   cursor:pointer;
 }
+
+form {
+width:70%;
+}
+form input {
+  width :80%;
+  margin:5px;
+padding:10px;
+  background-color: rgb(167, 136, 167);
+  color:white
+}
