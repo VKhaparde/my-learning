@@ -1,6 +1,7 @@
 import uuid from '../../node_modules/uuid/dist/v1';
 
 export const BookReducer = (state,action)=>{
+  console.log('state in bookReducer',state)
   switch(action.type){
     case 'ADD_BOOK' :{
       return [...state,{
@@ -10,7 +11,7 @@ export const BookReducer = (state,action)=>{
       }]
     }
     case 'REMOVE_BOOK' :{
-      return [state.filter(book => book.id !== action.id)]
+      return state.filter(book => book.id !== action.id)
     }
     default : {
       return state;

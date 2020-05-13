@@ -4,7 +4,7 @@ import BookDetails from './bookDetails';
 
 const BookList = ()=>{
  const {books} =useContext(BookContext);
-  return (books.length ? (
+  return books.length ? (
       <div className="bookList">
         <ul>
           {
@@ -21,7 +21,7 @@ const BookList = ()=>{
           You have no books to read. Happy Free Time!!!
         </div>
       )
-  );
+
 
 }
 export default BookList;

@@ -39,13 +39,22 @@ body {
   cursor:pointer;
 }
 
-form {
+input[type='text'],input[type='submit']{
 width:70%;
+font-size: 3vmin;
 }
-form input {
+form input[type='text'] {
   width :80%;
   margin:5px;
 padding:10px;
   background-color: rgb(167, 136, 167);
-  color:white
+  color:white;
+  box-sizing :border-box;
+}
+
+input[type='submit']{
+  width:50%;
+  background-color: white;
+  margin:5px;
+padding:10px;
 }
