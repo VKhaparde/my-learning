@@ -4,7 +4,7 @@ const MovieListing = (props) => {
   return (
     <React.Fragment>
       <tr>
-        <td><img src={props.movie.Poster} /></td>
+        <td><img src={props.movie.Poster} alt = "MoviePoster"/></td>
         <td>{props.movie.Title}</td>
         <td>{props.movie.Year}</td>
       </tr>

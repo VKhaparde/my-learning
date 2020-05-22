@@ -12,6 +12,7 @@ class App extends React.Component {
       movies: []
     };
     this.handleSearch = this.handleSearch.bind(this);
+    // this.handleSearchDebounce = this.handleSearchDebounce.bind(this);
   }
   handleSearchDebounce = _.debounce(searchString=>{
     let url = `http://www.omdbapi.com/?apikey=${config.apiKey}&s=${searchString}`
@@ -21,6 +22,9 @@ class App extends React.Component {
         if (data.Search) {
           console.log(data.Search);
           this.setState({ movies: data.Search })
+        }
+        else{
+            this.setState({movies : null})
         }
       })
   },1000)
