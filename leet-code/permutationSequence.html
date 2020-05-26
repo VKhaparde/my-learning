@@ -1,36 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <script>
-  var getPermutation = function (n,k) {
-      if()
-      if (!string || typeof string !== "string") {
-        return "Please enter a string"
-      } else if (string.length < 2) {
-        return string
+    var getPermutation = function (n, k) {
+      let strArray = [];
+      let str;
+      for (let i = 1; i <= n; i++) {
+        strArray.push(i);
       }
-      let permutationsArray = [];
+      str = strArray.join("");
+      console.log(str);
 
-      for (let i = 0; i < string.length; i++) {
-        let char = string[i]
-
-        let remainingChars = string.slice(0, i) + string.slice(i + 1, string.length)
-
-        for (let permutation of getPermutation(remainingChars)) {
-          permutationsArray.push(char + permutation)
+      const findPermutations = (string) => {
+        if (!string || typeof string !== "string") {
+          return "Enter a valid string";
         }
+        if (string.length < 2) {
+          return [string];
+        }
+        let pArray = [];
+        for (let i = 0; i < string.length; i++) {
+          let char = string[i];
+          //If you have repeating characters in the string like aabc then to avoid the duplicate
+          //permutations you need to check with this if statement.
+          if (string.indexOf(char) !== i) {
+            continue;
+            //continue statement breaks one iteration in the loop and if a specified
+            //condition occurs and continues with the next iteration in the loop.
+          }
+          let remainingChars = string.slice(0, i) + string.slice(i + 1, string.length);
+          for (let permutation of findPermutations(remainingChars)) {
+            pArray.push(char + permutation)
+          }
+        }
+        return pArray;
       }
-      console.log('permutations array',permutationsArray);
-      return permutationsArray;
-    };
- console.log(getPermutation(3,3));
+      let permutationsArray = findPermutations(str);
+      console.log('permutationsArray', permutationsArray);
+      let resultArray = permutationsArray.filter((currentVal, index) => {
+        return index + 1 === k;
+      });
+      return resultArray[0];
+    }
+    console.log(getPermutation(3, 3));
+    console.log(getPermutation(4, 8));
+
   </script>
 </head>
-<body>
 
+<body>
+  The set [1,2,3,...,n] contains a total of n! unique permutations.
+
+  By listing and labeling all of the permutations in order, we get the following sequence for n = 3:
+
+  "123"
+  "132"
+  "213"
+  "231"
+  "312"
+  "321"
+  Given n and k, return the kth permutation sequence.
+
+  Note:
+
+  Given n will be between 1 and 9 inclusive.
+  Given k will be between 1 and n! inclusive.
+  Example 1:
+
+  Input: n = 3, k = 3
+  Output: "213"
+  Example 2:
+
+  Input: n = 4, k = 9
+  Output: "2314"
 </body>
+
 </html>

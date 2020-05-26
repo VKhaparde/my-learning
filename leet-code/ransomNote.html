@@ -8,6 +8,9 @@
   <title>Document</title>
   <script>
     const canConstructRansomNote = (ransomNote, magazine) => {
+      if(ransomNote === "" && magazine === ""){
+        return false;
+      }
       let findPermutations = (string) => {
         if (!string || typeof string !== "string") {
           return "Please enter a string"
@@ -16,7 +19,6 @@
         }
 
         let permutationsArray = []
-
         for (let i = 0; i < string.length; i++) {
           let char = string[i]
 
@@ -37,12 +39,15 @@
       //  else return false;
       let result = false;
       let ransomeNoteCombinations = findPermutations(ransomNote);
-      ransomeNoteCombinations.forEach((eachCombination) => {
-         if(magazine.includes(eachCombination)){
-           result = true;
-           break;
-          }
-      })
+      console.log('ransomeNoteCombinations',ransomeNoteCombinations)
+      for(let i=0;i<ransomeNoteCombinations.length;i++){
+        if (magazine.includes(ransomeNoteCombinations[i])) {
+          result = true;
+          break;
+        }
+
+      }
+
       return result;
     }
     console.log(canConstructRansomNote("aa", "aab"));
