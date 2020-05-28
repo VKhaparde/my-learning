@@ -7,7 +7,35 @@
   <title>Document</title>
   <script>
     const balancedWords = (word)=>{
-      
+      let wordArray = word.split('');
+      let characterValues = {};
+      for(let i=1,j=97;i<=26,j<=122;i++,j++){
+        characterValues[j] = i ;
+      }
+      console.log('characterValues',characterValues);
+      let midPoint = Math.floor(word.length/2) ;
+      if(word.length%2 !== 0){
+        wordArray.splice(midPoint,1);
+        word = wordArray.join('');
+      }
+      let firstHalf = word.slice(0,midPoint);
+      let secondHalf = word.slice(midPoint,word.length);
+      console.log(firstHalf, secondHalf)
+      let firstHalfSum=0,secondHalfSum=0;
+      for(let i=0; i<firstHalf.length;i++){
+        console.log('characterValues[firstHalf.charCodeAt(i)', characterValues[firstHalf.charCodeAt(i)])
+        firstHalfSum += characterValues[firstHalf.charCodeAt(i)];
+      }
+      console.log('firstHalfSum',firstHalfSum);
+      for (let i = 0; i < secondHalf.length; i++) {
+        console.log('characterValues[secondHalf.charCodeAt(i)', characterValues[secondHalf.charCodeAt(i)])
+        secondHalfSum += characterValues[secondHalf.charCodeAt(i)];
+      }
+      console.log('secondHalfSum', secondHalfSum);
+      if(firstHalfSum === secondHalfSum){
+        return true;
+      }
+      return false;
     }
     console.log(balancedWords("zips"));
     console.log(balancedWords("brake"));
