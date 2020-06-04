@@ -29,7 +29,7 @@ export default class UserDetails extends React.Component {
           <p className="ml-4">MY DETAILS </p>
           <div className="mr-2 text-primary" onClick ={this.handleDetailsClick}><i className="fas fa-pencil-alt"></i></div>
         </div>
-        <div className="d-flex flex-column pl-2 align-items-start">
+        <div className="d-flex flex-column pl-2 align-items-start justify-content-center">
           <div className="py-1">Email: janedoe@gmail.com</div>
           <div className="pb-1">Phone: (949)321-0110</div>
           <div className="py-3 ml-3">HOME SHOPPER DETAILS</div>

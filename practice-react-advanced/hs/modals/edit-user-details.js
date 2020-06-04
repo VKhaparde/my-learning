@@ -62,7 +62,7 @@ class EditUserDetails extends React.Component {
                   <p className="m-1">I would like to...</p>
                   <div className="d-inline-flex">
                     <div className="px-2">
-                      <input type="checkbox" name="sellHome" value={this.state.sellHome} onChange={this.handleInputChange}></input>
+                      <input type="checkbox" name="sellHome" value={this.state.sellHome} checked = {true} onChange={this.handleInputChange}></input>
                       <label className="pl-2">Sell my home</label>
                     </div>
                     <div className="px-2">
@@ -109,8 +109,8 @@ class EditUserDetails extends React.Component {
               </div>
             </div>
           </Modal.Body>
-          <div className="text-center mb-3">
-            <Button className="mr-3" variant="secondary" onClick={(event) => this.props.hideModal(event)}>Cancel</Button>
+            <div className ="text-center mb-3">
+            <Button className= "mr-3" variant="secondary" onClick={(event) => this.props.hideModal(event)}>Cancel</Button>
             <Button variant="info" onClick={(event) => this.props.hideModal(event)}>Save</Button>
           </div>
         </Modal>
