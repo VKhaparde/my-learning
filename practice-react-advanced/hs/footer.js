@@ -1,5 +1,4 @@
 import React from 'react';
-import { CardDeck, Card } from 'react-bootstrap'
 
 export default class Footer extends React.Component {
   render() {
@@ -21,12 +20,12 @@ export default class Footer extends React.Component {
       // </div>
       <div className="footer">
 
-        <CardDeck className="mb-4 mx-4">
+        {/* <CardDeck className="mb-4 mx-4">
           <Card className="footerSections">
             <Card.Img variant="top" src="images/footerImg1.jpeg" className="footerImgStyle" />
             <Card.Body className="bg-light h-20">
               <Card.Text>
-                Find your next home with a virtual tour
+                Get Your home ready for summer
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy…
             </Card.Text>
             </Card.Body>
@@ -36,7 +35,7 @@ export default class Footer extends React.Component {
             <Card.Img variant="top" src="images/footerImg2.jpeg" />
             <Card.Body className="bg-light h-20">
               <Card.Text>
-                Get Your home ready for summer
+                Find your next home with a virtual tour
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy…
             </Card.Text>
             </Card.Body>
@@ -62,7 +61,47 @@ export default class Footer extends React.Component {
             </Card.Body>
           </Card>
 
-        </CardDeck>
+        </CardDeck> */}
+        <div className="container-fluid footerSection">
+          <div className="row pb-2 mb-2">
+            <div className="col-lg-3 col-md-3">
+              <div className="card showcard">
+                <img src="images/footerImg1.jpeg" className="card-img-top footerImgStyle" alt="home1" />
+                <div className=" card-body my-1 py-1">
+                  <p className="card-text">$2,400,000 5 bed | 4 bath | 3,240 sqft
+            543 Morane Blvd, Newport Beach, CA</p>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-3 col-md-3">
+              <div className="card showcard">
+                <img src="images/footerImg2.jpeg" className="card-img-top footerImgStyle" alt="home2" />
+                <div className=" card-body my-1 py-1">
+                  <p className="card-text">$2,400,000 5 bed | 4 bath | 3,240 sqft
+            543 Morane Blvd, Newport Beach, CA</p>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-3 col-md-3">
+              <div className="card showcard">
+                <img src="images/footerImg3.jpeg" className="card-img-top footerImgStyle" alt="home3" />
+                <div className=" card-body my-1 py-1">
+                  <p className="card-text">$2,400,000 5 bed | 4 bath | 3,240 sqft
+            543 Morane Blvd, Newport Beach, CA</p>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-3 col-md-3">
+              <div className="card showcard">
+                <img src="images/footerImg4.jpeg" className="card-img-top footerImgStyle" alt="home3" />
+                <div className=" card-body my-1 py-1">
+                  <p className="card-text">$2,400,000 5 bed | 4 bath | 3,240 sqft
+            543 Morane Blvd, Newport Beach, CA</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
