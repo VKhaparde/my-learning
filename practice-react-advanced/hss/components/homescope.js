@@ -8,29 +8,7 @@ export default class Homescope extends React.Component {
           <h6 className="ml-2"> MY HOMESCOPE</h6>
           <p className="text-primary mr-2">View all saved homes</p>
         </div>
-        {/* <div className="savedHomeImageSection d-flex justify-content-around">
-          <div className="">
-            <figure className="m-1" >
-              <img src="images/home1.jpeg" alt="home1" className="showCard"/>
-              <figcaption>$2,400,000 5 bed | 4 bath | 3,240 sqft <br />
-            543 Morane Blvd, Newport Beach, CA</figcaption>
-            </figure>
-          </div>
-          <div className="">
-            <figure className="m-1">
-              <img src="images/home1.jpeg" alt="home1" className="showCard" />
-              <figcaption>$2,400,000 5 bed | 4 bath | 3,240 sqft <br />
-            543 Morane Blvd, Newport Beach, CA</figcaption>
-            </figure>
-          </div>
-          <div className="">
-            <figure className="m-1">
-              <img src="images/home1.jpeg" alt="home1" className="showCard" />
-              <figcaption>$2,400,000 5 bed | 4 bath | 3,240 sqft <br />
-            543 Morane Blvd, Newport Beach, CA</figcaption>
-            </figure>
-          </div>
-           </div> */}
+        
         <div className="container-fluid savedHomeImageSection">
           <div className="row pb-4 mb-4">
             <div className="col-lg-4 col-md-4">

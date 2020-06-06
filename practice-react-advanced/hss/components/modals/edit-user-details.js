@@ -111,7 +111,7 @@ class EditUserDetails extends React.Component {
           </Modal.Body>
             <div className ="text-center mb-3">
             <Button className= "mr-3" variant="secondary" onClick={(event) => this.props.hideModal(event)}>Cancel</Button>
-            <Button variant="info" onClick={(event) => this.props.hideModal(event)}>Save</Button>
+            <Button variant="primary" className="" onClick={(event) => this.props.hideModal(event)}>Save</Button>
           </div>
         </Modal>
       </div>

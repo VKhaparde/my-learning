@@ -3,21 +3,6 @@ import React from 'react';
 export default class Footer extends React.Component {
   render() {
     return (
-      // <div className="footer">
-      //   <div className="footerSections">
-      //     <img src= "images/footerImg1.jpeg " alt="image1" className="imgstyle"/>
-      //     {/* Get Your home ready for summer */}
-      //   </div>
-      //   <div className="footerSections">
-      //    Find your next home with a virtual tour
-      //   </div>
-      //   <div className="footerSections">
-      //     Don't let COVID-19 scare you from buying your dream home
-      //   </div>
-      //   <div className="footerSections">
-      //     Debt - is it really a four letter word
-      //   </div>
-      // </div>
       <div className="footer">
 
         {/* <CardDeck className="mb-4 mx-4">
@@ -25,7 +10,7 @@ export default class Footer extends React.Component {
             <Card.Img variant="top" src="images/footerImg1.jpeg" className="footerImgStyle" />
             <Card.Body className="bg-light h-20">
               <Card.Text>
-                Get Your home ready for summer
+                Get your home ready for summer
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy…
             </Card.Text>
             </Card.Body>
@@ -62,43 +47,50 @@ export default class Footer extends React.Component {
           </Card>
 
         </CardDeck> */}
-        <div className="container-fluid ">
-          <div className="row pb-2 mb-2">
+        <div className="pb-2 pl-4 ml-2">reSET BLOG</div>
+        <div className="container-fluid footerSection">
+          <div className="row">
             <div className="col-lg-3 col-md-3">
-              <div className="card showcard">
+              <div className="card showCardFooter">
                 <img src="images/footerImg1.jpeg" className="card-img-top footerImgStyle" alt="home1" />
                 <div className=" card-body my-1 py-1">
                   <p className="card-text">
-                    <p>Get Your home ready for summer</p>
+                    <p className="mb-1 font-weight-bold">Get Your home ready for summer</p>
+                    <p className="mb-0 pb-0">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy…</p>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-3 col-md-3">
+              <div className="card showCardFooter">
+                <img src="images/footerImg2.jpeg" className="card-img-top footerImgStyle" alt="home2" />
+                <div className=" card-body my-1 py-1">
+                  <p className="card-text">
+                    <p className="mb-1 font-weight-bold">Find your next home with a virtual tour</p>
                     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy…</p>
                   </p>
                 </div>
               </div>
             </div>
             <div className="col-lg-3 col-md-3">
-              <div className="card showcard">
-                <img src="images/footerImg2.jpeg" className="card-img-top footerImgStyle" alt="home2" />
-                <div className=" card-body my-1 py-1">
-                  <p className="card-text"> Find your next home with a virtual tour
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy…</p>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-3">
-              <div className="card showcard">
+              <div className="card showCardFooter">
                 <img src="images/footerImg3.jpeg" className="card-img-top footerImgStyle" alt="home3" />
                 <div className=" card-body my-1 py-1">
-                  <p className="card-text">$2,400,000 5 bed | 4 bath | 3,240 sqft
-            543 Morane Blvd, Newport Beach, CA</p>
+                  <p className="card-text">
+                    <p className="mb-1 font-weight-bold">Don't let COVID-19 scare you from buying your dream home</p>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy…</p>
+                  </p>
                 </div>
               </div>
             </div>
             <div className="col-lg-3 col-md-3">
-              <div className="card showcard">
+              <div className="card showCardFooter">
                 <img src="images/footerImg4.jpeg" className="card-img-top footerImgStyle" alt="home3" />
-                <div className=" card-body my-1 py-1">
-                  <p className="card-text">$2,400,000 5 bed | 4 bath | 3,240 sqft
-            543 Morane Blvd, Newport Beach, CA</p>
+                <div className=" card-body my-2 py-1">
+                  <p className="card-text">
+                    <p className="mb-1 font-weight-bold">Debt - is it really a four letter word</p>
+                    <p className="mb-4">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy…</p>
+                  </p>
                 </div>
               </div>
             </div>

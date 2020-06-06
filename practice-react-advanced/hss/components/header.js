@@ -11,7 +11,7 @@ export default class Header extends React.Component {
   render() {
     return (
 
-        <Navbar bg="light" expand="lg" fixed="top" className="header">
+        <Navbar bg="white" expand="lg" fixed="top" className="header">
           <div className="ml-3">SetSchedule HomeScope</div>
           <div className='d-flex justify-content-around align-items-center ml-2'>
             <div className="px-3"> Dashboard</div>
@@ -22,7 +22,7 @@ export default class Header extends React.Component {
             </div>
           </div>
         </Navbar>
-    
+
 
     )
   }
