@@ -40,7 +40,7 @@ export default class Agents extends React.Component {
           </div>
           <div className="d-flex pl-4 pb-3">
             <div className="d-flex flex-column">
-              <div>
+              <div className="">
                 <img src="images/agentImg.jpeg" alt="agent1" className="agentImg pl-4"></img>
               </div>
               <div className="pl-4">Jon Smith</div>
