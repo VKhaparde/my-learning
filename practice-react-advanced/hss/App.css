@@ -1,0 +1,235 @@
+body{
+  font-family: sans-serif;
+  overflow-x:hidden;
+  font-size: 2vmin;
+}
+.App {
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+/* .App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height:10vh;
+  width:100vw;
+  font-size: 0.7rem;
+  /* font-size: 2vmin; */
+}
+.conciergeButton{
+  height:40px;
+  background-color: #a30000;
+  color:white;
+  border-radius: 3px;
+}
+.main{
+background-color: rgb(234, 236, 238);
+display:flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+/* height:90vh; */
+width:100vw;
+padding-bottom: 9%;
+margin-top: 6%;
+}
+.mainSection, .footer{
+  margin-left: 5%;
+  margin-right:5%;
+  padding-top: 2%;
+}
+.mainSection{
+  /* height:90vh; */
+  /* height:80%; */
+  display:flex;
+  width:90%;
+  padding-bottom: 1.5%;
+  justify-content:space-evenly;
+}
+.myHomescope{
+  width:65%;
+  display:flex;
+  flex-direction: column;
+  /* margin-bottom:3%; */
+}
+.myDetails{
+  background-color: white;
+  width:25%;
+  border:2px solid grey;
+  font-size: 0.7rem;
+  /* font-size: 2vmin; */
+}
+.savedHomes,.agents{
+  height:50%;
+  border:2px solid grey;
+  background-color: white;
+}
+.savedHomes{
+  margin-bottom:2.5%;
+  font-size: 0.7rem;
+}
+.savedHomeImageSection{
+  height:80%;
+  width:95%;
+  font-size: 0.4rem;
+}
+.agents{
+  font-size: 0.7rem;
+}
+.footer{
+  /* height:20%; */
+  height: 45vh;
+  width:84%;
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items:flex-start;
+  border:2px solid grey;
+  background-color: white;
+  font-size:0.7rem;
+}
+
+.footerSection{
+   /* height:80%;
+  width:24%;
+  border:2px solid grey; */
+  text-align: center;
+  height:80%;
+  width:95%;
+}
+
+.savedHomes,.agents, .myDetails , .footer{
+  border-radius: 10px;
+}
+.showcard{
+height:100%;
+width:100%;
+cursor:pointer;
+/* box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5); */
+position:relative;
+}
+/* .showcard:hover{
+  -webkit-transform: scale(1.03);
+  -ms-transform: scale(1.03);
+  transform: scale(1.03);
+} */
+
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  color:#e00e0e;
+}
+
+.imgstyle{
+  height:75%;
+  width:100%;
+  /* object-fit: fill; */
+}
+
+.imgstyle1{
+  height:100%;
+  width:100%;
+  object-fit:cover;
+}
+.homescopeText{
+  position: absolute;
+  bottom: 0;
+  background:rgb(255, 255, 255); /* Fallback color */
+  background: rgb(255, 255, 255,0.7); /* Black background with 0.7 opacity */
+  color: #f1f1f1;
+  width: 100%;
+  height:30%;
+  padding: 3%;
+  border-radius: 2%;
+  color:black;
+  /* font-size: 1.5vmin; */
+  font-size:0.55rem;
+  text-align: center;
+}
+.footerImgStyle{
+  height:55%;
+  cursor:pointer;
+}
+.buttonTextStyle{
+  font-size:2vmin;
+}
+.showCardFooter{
+height:65%;
+cursor:pointer;
+/* box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5); */
+box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.16);
+font-size: 0.55rem;
+}
+/* This class is not used yet. Planning to use it instead of card-body in the footer section */
+.footerText{
+ font-size: 0.5rem;
+}
+
+.agentImg{
+  height:100px;
+  width:100px;
+  object-fit: contain;
+}
+.editUserDetails{
+  font-size:2vmin;
+}
+.shareMyHomeScope{
+font-size: 0.7rem;
+}
+
+.selectedHomeToShare{
+  border:2px solid #4ea5d9;
+  border-radius:5px;
+  box-shadow: 0 0 5px  rgba(78, 165, 217, 1);
+}
+
+
+
+
+ @media only screen and (max-width: 1370px) {
+  body {
+    font-size: 1.5vmin;
+  }
+  .footerSection{
+    font-size: 0.5rem;
+  }
+
+}
