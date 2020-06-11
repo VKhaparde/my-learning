@@ -21,7 +21,7 @@ export default class UserDetails extends React.Component {
 
   render() {
     return (
-      <div className="myDetails mb-1">
+      <div className="myDetails">
         {this.state.editDetailsClicked && <EditUserDetails
         show = {this.state.editDetailsClicked} handleDetailsClick={this.handleDetailsClick} hideModal={this.hideModal} />
         }

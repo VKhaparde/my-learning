@@ -2,22 +2,22 @@ import React from 'react';
 import Footer from './footer';
 import UserDetails from './user-details';
 import Homescope from './homescope';
-import Agents from './agents';
 
-export default class Main extends React.Component {
+
+export default class Dashboard extends React.Component {
   render() {
     return (
       <div className="main">
         <div className="mainSection">
-          <section className="myHomescope">
+          <div className="myHomescope">
             {/* <section className="savedHomes"> </section> */}
             <Homescope />
             {/* <section className="agents">
             </section> */}
-            <Agents />
-          </section>
+            {/* <Agents /> */}
+          </div>
           {/* <section className="myDetails"> </section> */}
-          <UserDetails/>
+          <UserDetails />
         </div>
         <Footer />
       </div>

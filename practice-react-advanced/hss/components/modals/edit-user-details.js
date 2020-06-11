@@ -33,7 +33,7 @@ class EditUserDetails extends React.Component {
       <div>
         <Modal size="lg"
           aria-labelledby="contained-modal-title-vcenter" centered
-          keyboard={false} show={this.props.show}>
+          keyboard={false} show={this.props.show} className="editUserDetails">
           {/* <Modal.Header>
           <Modal.Title id="contained-modal-title-vcenter">MY DETAILS</Modal.Title>
         </Modal.Header> */}
@@ -110,8 +110,8 @@ class EditUserDetails extends React.Component {
             </div>
           </Modal.Body>
             <div className ="text-center mb-3">
-            <Button className= "mr-3" variant="secondary" onClick={(event) => this.props.hideModal(event)}>Cancel</Button>
-            <Button variant="primary" className="" onClick={(event) => this.props.hideModal(event)}>Save</Button>
+            <Button className= "mr-3 buttonTextStyle" variant="secondary" onClick={(event) => this.props.hideModal(event)}>Cancel</Button>
+            <Button variant="primary" className="buttonTextStyle" style={{ backgroundColor: "#4ea5d9" }} onClick={(event) => this.props.hideModal(event)}>Save</Button>
           </div>
         </Modal>
       </div>

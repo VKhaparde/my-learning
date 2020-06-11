@@ -2,14 +2,15 @@ import React from 'react';
 import { Button } from 'react-bootstrap';
 import ShareMyHomeScope from './modals/share-myhomescope';
 import { Popover, OverlayTrigger } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 export default class Agents extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value :'',
+      value: '',
       shareMyHomeScopeClicked: false,
-      isPopoverCloseButtonClicked : false
+      isPopoverCloseButtonClicked: false
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleShareMyHomeScopeClicked = this.handleShareMyHomeScopeClicked.bind(this);
@@ -24,9 +25,9 @@ export default class Agents extends React.Component {
       shareMyHomeScopeClicked: true
     });
   }
-  handlePopoverClose(){
+  handlePopoverClose() {
     this.setState({
-      isPopoverCloseButtonClicked:true
+      isPopoverCloseButtonClicked: true
     })
   }
   hideModal() {
@@ -57,9 +58,13 @@ export default class Agents extends React.Component {
           <div className="d-flex justify-content-start pl-4 my-1">
             <div className="pl-0">MY AGENTS</div>
             <div className="pl-4">|</div>
-            <div className="pl-4 text-primary">John Smith</div>
+            <Link to="/">
+              <div className="pl-4 text-primary">John Smith</div>
+            </Link>
             <div className="pl-4">Grace Adeline</div>
-            <div className="pl-4">Nina Johnson</div>
+            <Link to="/agent2">
+              <div className="pl-4">Nina Johnson</div>
+            </Link>
           </div>
           <div className="d-flex pl-4">
             <div className="d-flex flex-column">
@@ -101,6 +106,7 @@ export default class Agents extends React.Component {
 
         </div>
       </div>
+
     );
   }
 }
