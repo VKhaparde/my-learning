@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
 body{
-  font-family: sans-serif;
+  font-family: 'Open Sans', sans-serif;
   overflow-x:hidden;
   font-size: 2vmin;
   color:rgb(139, 131, 131);
@@ -18,14 +20,15 @@ body{
   align-items: center;
   height:10vh;
   width:100vw;
-  font-size: 0.7rem;
+  font-size:0.6875rem;
   /* font-size: 2vmin; */
 }
 .conciergeButton{
-  height:40px;
+  height:35px;
   background-color: #a30000;
   color:white;
-  border-radius: 3px;
+  border-radius: 4px;
+  width:160px;
 }
 .logoHolder{
  position:relative;
@@ -49,6 +52,7 @@ body{
   height:15px;
   width:15px;
   color:#4ea5d9;
+  margin-top:2px;
 }
 .main{
 background-color: rgb(234, 236, 238);
@@ -67,7 +71,7 @@ margin-top: 6%;
   padding-top: 2%;
 }
 .mainSection{
-  /* height:90vh; */
+  height:80vh;
   /* height:80%; */
   display:flex;
   width:90%;
@@ -75,16 +79,16 @@ margin-top: 6%;
   justify-content:space-evenly;
 }
 .myHomescope{
-  width:65%;
+  width:68%;
   display:flex;
   flex-direction: column;
   /* margin-bottom:3%; */
 }
 .myDetails{
   background-color: white;
-  width:25%;
+  width:22%;
   /* border:2px solid grey; */
-  font-size: 0.7rem;
+  font-size:0.6875rem;
   /* font-size: 2vmin; */
 }
 .savedHomes,.agents{
@@ -94,7 +98,7 @@ margin-top: 6%;
 }
 .savedHomes{
   margin-bottom:2.5%;
-  font-size: 0.7rem;
+  font-size:0.6875rem;
 }
 .savedHomeImageSection{
   height:80%;
@@ -102,7 +106,7 @@ margin-top: 6%;
   font-size: 0.4rem;
 }
 .agents{
-  font-size: 0.7rem;
+  font-size:0.6875rem;
 }
 .footer{
   /* height:20%; */
@@ -114,12 +118,12 @@ margin-top: 6%;
   align-items:flex-start;
   /* border:2px solid grey; */
   background-color: white;
-  font-size:0.7rem;
+  font-size:0.6875rem;
 }
 
 .footerSection{
-   /* height:80%;
-  width:24%;
+   /* height:80%; */
+  /*width:24%;
   border:2px solid grey; */
   text-align: center;
   height:80%;
@@ -130,10 +134,9 @@ margin-top: 6%;
   border-radius: 10px;
 }
 .showcard{
-height:100%;
+height:98%;
 width:100%;
 cursor:pointer;
-/* box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5); */
 position:relative;
 }
 /* .showcard:hover{
@@ -168,42 +171,46 @@ position:relative;
   color: #f1f1f1;
   width: 100%;
   height:30%;
-  padding: 3%;
+  padding-top: 2%;
   border-radius: 2%;
   color:black;
   /* font-size: 1.5vmin; */
   font-size:0.55rem;
   text-align: center;
+  /* text-overflow: clip; */
 }
 .footerImgStyle{
   height:55%;
   cursor:pointer;
 }
 .buttonTextStyle{
-  font-size:2vmin;
+  font-size:0.75rem;
 }
 .showCardFooter{
 height:65%;
 cursor:pointer;
-/* box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5); */
 box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.16);
 font-size: 0.55rem;
 }
 /* This class is not used yet. Planning to use it instead of card-body in the footer section */
 .footerText{
- font-size: 0.5rem;
+ font-size: 12px;
+ color:darkgrey;
 }
-
+.footerheading{
+  font-size: 14px;
+  font-weight: bold;
+}
 .agentImg{
   height:100px;
   width:100px;
   object-fit: contain;
 }
 .editUserDetails{
-  font-size:2vmin;
+  font-size:0.75rem;
 }
 .shareMyHomeScope{
-font-size: 0.7rem;
+font-size:0.6875rem;
 }
 
 .selectedHomeToShare{
