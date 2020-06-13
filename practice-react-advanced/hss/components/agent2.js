@@ -41,8 +41,8 @@ export default class Agent2 extends React.Component{
         {this.state.shareMyHomeScopeClicked && <ShareMyHomeScope
           show={this.state.shareMyHomeScopeClicked} handleShareMyHomeScopeClicked={this.handleShareMyHomeScopeClicked} hideModal={this.hideModal} />
         }
-        <div className="d-flex flex-column pb-4">
-          <div className="d-flex justify-content-start pl-4 my-1">
+        <div className="d-flex flex-column pb-4 mt-3">
+          <div className="d-flex justify-content-start pl-4 ml-4">
             <div className="pl-0">MY AGENTS</div>
             <div className="pl-4">|</div>
             <Link to="/">

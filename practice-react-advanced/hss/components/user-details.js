@@ -31,7 +31,7 @@ export default class UserDetails extends React.Component {
         </div>
         <div className="d-flex flex-column pl-2 align-items-start justify-content-center">
           <div className="py-1"><span className="text-primary">Email: </span>janedoe@gmail.com</div>
-          <div className="pb-1"><span className="text-primary">Phone: </span>(949)321-0110</div>
+          <div className="pb-1"><span className="text-primary">Phone: </span>(949) 321-0110</div>
           <div className="py-3 ">HOME SHOPPER DETAILS</div>
           <div className="py-1"><span className="text-primary">Budget: </span>$950,000</div>
           <div className="py-1"><span className="text-primary">Desired Location: </span>Costa Mesa, CA</div>

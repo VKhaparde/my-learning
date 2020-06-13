@@ -30,7 +30,7 @@ export default class ShareMyHomeScope extends React.Component {
           <Modal size="lg"
             aria-labelledby="contained-modal-title-vcenter" centered
             keyboard={false} show={this.props.show} onHide={this.props.hideModal}>
-            <Modal.Header closeButton >SHARE MYHOMESCOPE</Modal.Header>
+            <Modal.Header closeButton><h6>SHARE MYHOMESCOPE</h6></Modal.Header>
             <Modal.Body>
               <div className="d-flex flex-column align-items-center shareMyHomeScope">
                 <div><i className="far fa-check-circle fa-5x" style={{ color:"#4ea5d9"}}></i></div>
@@ -44,7 +44,7 @@ export default class ShareMyHomeScope extends React.Component {
                         <div className="card showcard">
                           <img src="images/home4.jpeg" className="card-img-top imgstyle1" alt="home1" />
                           <div className="homescopeText">
-                            <div><b>$2,400,000</b> 5 bed | 4 bath | 3,240 sqft
+                            <div><span style={{ fontSize:"0.6rem",fontWeight:"bold"}}>$2,400,000</span> 5 bed | 4 bath | 3,240 sqft
                                <p> 543 Morane Blvd, Newport Beach, CA</p>
                             </div>
                           </div>
@@ -56,7 +56,7 @@ export default class ShareMyHomeScope extends React.Component {
                         <div className="card showcard">
                           <img src="images/home3.jpeg" className="card-img-top imgstyle1" alt="home1" />
                           <div className="homescopeText">
-                            <div><b>$2,400,000</b> 5 bed | 4 bath | 3,240 sqft
+                            <div><span style={{ fontSize:"0.6rem",fontWeight:"bold"}}>$2,400,000</span> 5 bed | 4 bath | 3,240 sqft
                                <p> 543 Morane Blvd, Newport Beach, CA</p>
                             </div>
                           </div>
@@ -68,7 +68,7 @@ export default class ShareMyHomeScope extends React.Component {
                         <div className="card showcard">
                           <img src="images/home6.jpeg" className="card-img-top imgstyle1" alt="home1" />
                           <div className="homescopeText">
-                            <div><b>$2,400,000</b> 5 bed | 4 bath | 3,240 sqft
+                            <div><span style={{ fontSize:"0.6rem",fontWeight:"bold"}}>$2,400,000</span> 5 bed | 4 bath | 3,240 sqft
                                <p> 543 Morane Blvd, Newport Beach, CA</p>
                             </div>
                           </div>
@@ -89,7 +89,7 @@ export default class ShareMyHomeScope extends React.Component {
         <Modal size="lg"
           aria-labelledby="contained-modal-title-vcenter" centered
           keyboard={false} show={this.props.show} onHide={this.props.hideModal}>
-          <Modal.Header closeButton >SHARE MYHOMESCOPE</Modal.Header>
+          <Modal.Header closeButton ><h6>SHARE MYHOMESCOPE</h6></Modal.Header>
           <Modal.Body>
             <div className="d-flex flex-column shareMyHomeScope">
               <div>Select which of your saved homes you’d like to share with John Smith.</div>
@@ -102,7 +102,7 @@ export default class ShareMyHomeScope extends React.Component {
                         <div className="card showcard">
                           <img src="images/home4.jpeg" className="card-img-top imgstyle1" alt="home1" />
                           <div className="homescopeText">
-                            <div><b>$2,400,000</b> 5 bed | 4 bath | 3,240 sqft
+                            <div><span style={{ fontSize: "0.6rem", fontWeight: "bold" }}>$2,400,000</span> 5 bed | 4 bath | 3,240 sqft
                                <p> 543 Morane Blvd, Newport Beach, CA</p>
                             </div>
                           </div>
@@ -114,7 +114,7 @@ export default class ShareMyHomeScope extends React.Component {
                         <div className="card showcard">
                           <img src="images/home3.jpeg" className="card-img-top imgstyle1" alt="home2" />
                           <div className="homescopeText">
-                            <div><b>$2,400,000</b> 5 bed | 4 bath | 3,240 sqft
+                            <div><span style={{ fontSize:"0.6rem",fontWeight:"bold"}}>$2,400,000</span> 5 bed | 4 bath | 3,240 sqft
                               <p> 543 Morane Blvd, Newport Beach, CA</p>
                             </div>
                           </div>
@@ -126,7 +126,7 @@ export default class ShareMyHomeScope extends React.Component {
                         <div className="card showcard">
                           <img src="images/home7.jpeg" className="card-img-top imgstyle1" alt="home3" />
                           <div className="homescopeText">
-                            <div><b>$2,400,000</b> 5 bed | 4 bath | 3,240 sqft
+                            <div><span style={{ fontSize:"0.6rem",fontWeight:"bold"}}>$2,400,000</span> 5 bed | 4 bath | 3,240 sqft
                             <p> 543 Morane Blvd, Newport Beach, CA</p>
                             </div>
                           </div>
@@ -140,7 +140,7 @@ export default class ShareMyHomeScope extends React.Component {
                         <div className="card showcard">
                           <img src="images/home4.jpeg" className="card-img-top imgstyle1" alt="home1" />
                           <div className="homescopeText">
-                            <div><b>$2,400,000</b> 5 bed | 4 bath | 3,240 sqft
+                            <div><span style={{ fontSize:"0.6rem",fontWeight:"bold"}}>$2,400,000</span> 5 bed | 4 bath | 3,240 sqft
                               <p> 543 Morane Blvd, Newport Beach, CA</p>
                             </div>
                           </div>
@@ -152,7 +152,7 @@ export default class ShareMyHomeScope extends React.Component {
                         <div className="card showcard">
                           <img src="images/home3.jpeg" className="card-img-top imgstyle1" alt="home1" />
                           <div className="homescopeText">
-                            <div><b>$2,400,000</b> 5 bed | 4 bath | 3,240 sqft
+                            <div><span style={{ fontSize:"0.6rem",fontWeight:"bold"}}>$2,400,000</span> 5 bed | 4 bath | 3,240 sqft
                       <p> 543 Morane Blvd, Newport Beach, CA</p>
                             </div>
                           </div>
@@ -164,7 +164,7 @@ export default class ShareMyHomeScope extends React.Component {
                         <div className="card showcard">
                           <img src="images/home4.jpeg" className="card-img-top imgstyle1" alt="home1" />
                           <div className="homescopeText">
-                            <div><b>$2,400,000</b> 5 bed | 4 bath | 3,240 sqft
+                            <div><span style={{ fontSize:"0.6rem",fontWeight:"bold"}}>$2,400,000</span> 5 bed | 4 bath | 3,240 sqft
                       <p> 543 Morane Blvd, Newport Beach, CA</p>
                             </div>
                           </div>
@@ -179,8 +179,8 @@ export default class ShareMyHomeScope extends React.Component {
 
           </Modal.Body >
           <div className="text-center mb-3">
-            <Button className="mr-3 buttonTextStyle" variant="secondary" style={{ width: "15% " }} onClick={(event) => this.props.hideModal(event)}>Cancel</Button>
-            <Button variant="info" className="buttonTextStyle" style={{ backgroundColor: "#4ea5d9", width: "15% " }}
+            <Button className="mr-3 buttonTextStyle" variant="secondary" style={{ width: "17%" }} onClick={(event) => this.props.hideModal(event)}>Cancel</Button>
+            <Button variant="info" className="buttonTextStyle" style={{ backgroundColor: "#4ea5d9", width: "17%" }}
               onClick={this.handleShareHome}>Share</Button>
           </div>
         </Modal>

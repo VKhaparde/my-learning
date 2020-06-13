@@ -54,7 +54,7 @@ export default class Agents extends React.Component {
         {this.state.shareMyHomeScopeClicked && <ShareMyHomeScope
           show={this.state.shareMyHomeScopeClicked} handleShareMyHomeScopeClicked={this.handleShareMyHomeScopeClicked} hideModal={this.hideModal} />
         }
-        <div className="d-flex flex-column">
+        <div className="d-flex flex-column mt-3">
           <div className="d-flex justify-content-start pl-4 my-1">
             <div className="pl-0">MY AGENTS</div>
             <div className="pl-4">|</div>
@@ -66,10 +66,10 @@ export default class Agents extends React.Component {
               <div className="pl-4">Nina Johnson</div>
             </Link>
           </div>
-          <div className="d-flex pl-4">
+          <div className="d-flex pl-4 pb-0  mb-0">
             <div className="d-flex flex-column">
               <div className="">
-                <img src="images/agentImg.jpeg" alt="agent1" className="agentImg pl-4"></img>
+                <img src="images/agentImg6.png" alt="agent1" className="agentImg pl-4 mt-2"></img>
               </div>
               <div className="d-flex flex-column align-items-center">
                 <div className="pl-2"><b>John Smith</b></div>
@@ -77,16 +77,17 @@ export default class Agents extends React.Component {
                 <div className="pl-2">Keller Williams</div>
               </div>
             </div>
-            <div className="pb-4 mt-3 d-flex flex-column justify-content-start align-items-start">
+          {/* Added pl-4 to separate the agents pic and agent details further apart */}
+            <div className="pb-4 mt-3 pl-4 ml-4 d-flex flex-column justify-content-start align-items-start">
               <div className="d-flex justify-content-start pl-4">
                 <div><span className="text-primary">Email: </span>johnsmith@gmail.com</div>
-                <div className="pl-3"><span className="text-primary">Work: </span>(949)321-0110</div>
-                <div className="pl-3"><span className="text-primary">Cell: </span>(949)324-0110</div>
+                <div className="pl-3"><span className="text-primary">Work: </span>(949) 321-0110</div>
+                <div className="pl-3"><span className="text-primary">Cell: </span>(949) 324-0110</div>
               </div>
               <div className="text-primary pl-4 mt-2">Agent Ranking</div>
               <div className="pl-4 pb-1">Ranking this agent as 1 will set them as your primary agent</div>
               <div className="mb-2">
-                <select value={this.state.value} className="ml-4 py-1" onChange={this.handleChange}>
+                <select value={this.state.value} className="ml-4 py-1" style={{ color:"rgb(139, 131, 131)"}} onChange={this.handleChange}>
                   <option value="selectValue">Select...</option>
                   <option value="1st">1st</option>
                   <option value="2nd">2nd</option>
@@ -94,11 +95,11 @@ export default class Agents extends React.Component {
                   <option value="4th">Remove from my Homescope</option>
                 </select>
               </div>
-              <div className="d-flex pl-4">
+              <div className="d-flex pl-4 mt-1">
                 <OverlayTrigger trigger="click" placement="bottom" overlay={ContactAgentPopOver}  >
-                  <Button variant="primary" className="buttonTextStyle" style={{ backgroundColor: "#4ea5d9" }} >Contact my agent</Button>
+                  <Button variant="primary" className="buttonTextStyle" style={{ backgroundColor: "#4ea5d9",width:"185px"}} >Contact my agent</Button>
                 </OverlayTrigger>
-                <Button variant="dark" className="ml-4 buttonTextStyle" style={{ backgroundColor: "#23395b" }} onClick={this.handleShareMyHomeScopeClicked}>Share My Homescope</Button>
+                <Button variant="dark" className="ml-2 buttonTextStyle" style={{ backgroundColor: "#23395b", width: "185px"}} onClick={this.handleShareMyHomeScopeClicked}>Share My Homescope</Button>
               </div>
             </div>
 

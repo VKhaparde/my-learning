@@ -7,7 +7,7 @@ class EditUserDetails extends React.Component {
     this.state = {
       userName: 'Jane Doe',
       email: 'janedoe@gmail.com',
-      phone: '(949)3210110',
+      phone: '(949) 321-0110',
       sellHome: true,
       buyHome: false,
       rentHome: false,
@@ -105,13 +105,13 @@ class EditUserDetails extends React.Component {
                 </div>
               </form>
               <div className="m-1">
-                <p>I’m no longer working with an agent and do not wish to be contacted. <span className="text-danger">Deactivate</span></p>
+                <p>I’m no longer working with an agent and do not wish to be contacted. <span className="text-danger"><u>Deactivate</u></span></p>
               </div>
             </div>
           </Modal.Body>
             <div className ="text-center mb-3">
-            <Button className= "mr-3 buttonTextStyle" variant="secondary" onClick={(event) => this.props.hideModal(event)}>Cancel</Button>
-            <Button variant="primary" className="buttonTextStyle" style={{ backgroundColor: "#4ea5d9" }} onClick={(event) => this.props.hideModal(event)}>Save</Button>
+            <Button className="mr-3 buttonTextStyle" variant="secondary" style={{width: "17%" }} onClick={(event) => this.props.hideModal(event)}>Cancel</Button>
+            <Button variant="primary" className="buttonTextStyle" style={{ backgroundColor: "#4ea5d9", width: "17%" }} onClick={(event) => this.props.hideModal(event)}>Save</Button>
           </div>
         </Modal>
       </div>

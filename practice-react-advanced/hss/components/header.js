@@ -33,7 +33,7 @@ export default class Header extends React.Component {
           </Link>
           <Link to="/requestanagent">
             <div className="px-3 d-flex">
-              <img src="images/businessman.png" alt="hsIcon" className="headerIcons mr-1" />
+              <img src="images/businessman.png" alt="agentIcon" className="headerIcons mr-1" />
               <div>Request an Agent</div>
             </div>
           </Link>

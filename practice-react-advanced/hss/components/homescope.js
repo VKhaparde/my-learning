@@ -6,7 +6,7 @@ import Agent2 from './agent2';
 export default class Homescope extends React.Component {
   render() {
     return (
-      <div>
+      <div className="myHomescope">
         <div className="d-flex flex-column savedHomes">
           <div className="d-flex justify-content-between mt-2">
             <p className="ml-2"> MY HOMESCOPE</p>
@@ -20,7 +20,7 @@ export default class Homescope extends React.Component {
                   <img src="images/home4.jpeg" className="card-img-top imgstyle1" alt="home1" />
                   <div className="top-right"><i className="fas fa-heart fa-3x"></i></div>
                   <div className="homescopeText">
-                    <div><b>$2,400,000</b> 5 bed | 4 bath | 3,240 sqft
+                    <div><span style={{ fontSize:"0.6rem",fontWeight:"bold"}}>$2,400,000</span> 5 bed | 4 bath | 3,240 sqft
                       <p> 543 Morane Blvd, Newport Beach, CA</p>
                     </div>
                   </div>
@@ -31,7 +31,7 @@ export default class Homescope extends React.Component {
                   <img src="images/home3.jpeg" className="card-img-top imgstyle1" alt="home1" />
                   <div className="top-right"><i className="far fa-heart fa-3x"></i></div>
                   <div className="homescopeText">
-                    <div><b>$2,400,000</b> 5 bed | 4 bath | 3,240 sqft
+                    <div><span style={{ fontSize: "0.6rem", fontWeight: "bold" }}>$2,400,000</span> 5 bed | 4 bath | 3,240 sqft
                       <p> 543 Morane Blvd, Newport Beach, CA</p>
                     </div>
                   </div>
@@ -42,7 +42,7 @@ export default class Homescope extends React.Component {
                   <img src="images/home2.jpeg" className="card-img-top imgstyle1" alt="home1" />
                   <div className="top-right"><i className="far fa-heart fa-3x"></i></div>
                   <div className="homescopeText">
-                    <div><b>$2,400,000</b> 5 bed | 4 bath | 3,240 sqft
+                    <div><span style={{ fontSize:"0.6rem",fontWeight:"bold"}}>$2,400,000</span> 5 bed | 4 bath | 3,240 sqft
                       <p> 543 Morane Blvd, Newport Beach, CA</p>
                     </div>
                   </div>

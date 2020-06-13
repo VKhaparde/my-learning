@@ -9,14 +9,8 @@ export default class Dashboard extends React.Component {
     return (
       <div className="main">
         <div className="mainSection">
-          <div className="myHomescope">
-            {/* <section className="savedHomes"> </section> */}
-            <Homescope />
-            {/* <section className="agents">
-            </section> */}
-            {/* <Agents /> */}
-          </div>
-          {/* <section className="myDetails"> </section> */}
+
+          <Homescope />
           <UserDetails />
         </div>
         <Footer />
