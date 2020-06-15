@@ -8,9 +8,7 @@ class EditUserDetails extends React.Component {
       userName: 'Jane Doe',
       email: 'janedoe@gmail.com',
       phone: '(949) 321-0110',
-      sellHome: true,
-      buyHome: false,
-      rentHome: false,
+      selectedOption: 'buyHome',
       desiredLocation: 'Costa Mesa, CA',
       budget: '$950,000',
       beds: '3+',
@@ -21,8 +19,8 @@ class EditUserDetails extends React.Component {
     this.handleInputChange = this.handleInputChange.bind(this);
   }
   handleInputChange(event) {
-    console.log('event.target.name', event.target.name);
-    console.log('event.target.value', event.target.value);
+    console.log('event.target.name :', event.target.name);
+    console.log('event.target.value :', event.target.value);
     this.setState({
       [event.target.name]: event.target.value
     })
@@ -62,15 +60,18 @@ class EditUserDetails extends React.Component {
                   <p className="m-1">I would like to...</p>
                   <div className="d-inline-flex">
                     <div className="px-2">
-                      <input type="checkbox" name="sellHome" value={this.state.sellHome} checked = {true} onChange={this.handleInputChange}></input>
+                      <input type="radio" name="selectedOption" value="sellHome" checked={this.state.selectedOption === "sellHome"}
+                        onChange={this.handleInputChange}></input>
                       <label className="pl-2">Sell my home</label>
                     </div>
                     <div className="px-2">
-                      <input type="checkbox" name="buyHome" value={this.state.buyHome} onChange={this.handleInputChange}></input>
+                      <input type="radio" name="selectedOption" value="buyHome" checked={this.state.selectedOption === "buyHome"}
+                        onChange={this.handleInputChange}></input>
                       <label className="pl-2">Buy a home</label>
                     </div>
                     <div className="px-2">
-                      <input type="checkbox" name="rentHome" value={this.state.rentHome} onChange={this.handleInputChange}></input>
+                      <input type="radio" name="selectedOption" value="rentHome" checked={this.state.selectedOption === "rentHome"}
+                        onChange={this.handleInputChange}></input>
                       <label className="pl-2">Rent a home</label>
                     </div>
                   </div>
@@ -109,8 +110,8 @@ class EditUserDetails extends React.Component {
               </div>
             </div>
           </Modal.Body>
-            <div className ="text-center mb-3">
-            <Button className="mr-3 buttonTextStyle" variant="secondary" style={{width: "17%" }} onClick={(event) => this.props.hideModal(event)}>Cancel</Button>
+          <div className="text-center mb-3">
+            <Button className="mr-3 buttonTextStyle" variant="secondary" style={{ width: "17%" }} onClick={(event) => this.props.hideModal(event)}>Cancel</Button>
             <Button variant="primary" className="buttonTextStyle" style={{ backgroundColor: "#4ea5d9", width: "17%" }} onClick={(event) => this.props.hideModal(event)}>Save</Button>
           </div>
         </Modal>
