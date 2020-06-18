@@ -14,6 +14,10 @@ body{
   box-sizing: border-box;
 }
 
+.darkSkyBlue{
+  color:#4ea5d9;
+}
+
 .header{
   display: flex;
   justify-content: space-between;
@@ -24,11 +28,11 @@ body{
   /* font-size: 2vmin; */
 }
 .conciergeButton{
-  height:35px;
+  height:40px;
   background-color: #a30000;
   color:white;
   border-radius: 4px;
-  width:160px;
+  width:175px;
 }
 .logoHolder{
  position:relative;
@@ -241,6 +245,36 @@ font-size:0.6875rem;
   visibility: hidden;
 }
 
+.homescopePage{
+  position: relative;
+  top: 10%;
+  margin: 5%;
+  background-color :rgb(234, 236, 238);
+  height:90vh;
+  width:90vw;
+  padding:2% 4%;
+  font-size: 0.7rem;
+}
+.sidebarHomescope{
+  height:100%;
+  width:15%;
+  margin-right: 4%;
+  padding-top:3%;
+  padding-left: 1%;
+}
+.mainHomescope{
+  height:100%;
+  width:85%;
+  padding:3%;
+}
+.sidebarHomescope, .mainHomescope{
+  border-radius: 10px;
+  background-color: white;
+}
+.hsIcon{
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
+}
  @media only screen and (max-width: 1370px) {
   body {
     font-size: 1.5vmin;
