@@ -6,7 +6,16 @@
   <title>Document</title>
   <script>
     const  myAtoi = (str)=>{
-
+      str = str.trim();
+      console.log(str);
+      if(str.length === 0){
+        return 0;
+      }
+      let isNegative = false;
+      for(let i=0;i<str.length;i++){
+        if(str[i]==='-')
+        isNegative=true;
+      }
     }
     console.log(myAtoi("    -42"));
   </script>
