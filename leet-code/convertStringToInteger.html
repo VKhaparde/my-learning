@@ -1,27 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <script>
-    const  myAtoi = (str)=>{
+    const myAtoi = (str) => {
+      debugger;
       str = str.trim();
-      console.log(str);
-      if(str.length === 0){
+      if (str.length === 0 || str === null) {
         return 0;
       }
+      let result = 0;
+      let startIndex = 0;
       let isNegative = false;
-      for(let i=0;i<str.length;i++){
-        if(str[i]==='-')
+
+      if (str[0] === '-' || str[0] === '+') {
+        ++startIndex;
+      }
+      if(str[0]==='-'){
         isNegative=true;
       }
-     for (int i = startIndex; i < str.length(); i++) {
+      for (let i = startIndex; i < str.length; i++) {
         //handle for non numeric characters
-        if (str.charAt(i) < '0' || str.charAt(i) > '9') { //checking if ascii value is below or above 0 or 9
+        if (str.charCodeAt(i) < 48 || str.charCodeAt(i) > 57) { //checking if ascii value is below or above 0 or 9
           break;
         }
-        int digitValue = (int)(str.charAt(i) - '0');
+        let digitValue = parseInt(str.charAt(i) - '0');
         result = result * 10 + digitValue;
       }
 
@@ -31,34 +37,37 @@
       }
 
       //handle underflow
-      if (result < Integer.MIN_VALUE) {
-        return Integer.MIN_VALUE;
+      if (result < Number.MIN_VALUE) {
+        return Number.MIN_VALUE;
       }
       //handle overflow
-      if (result > Integer.MAX_VALUE) {
-        return Integer.MAX_VALUE;
+      if (result > Number.MAX_SAFE_INTEGER) {
+        return Number.MAX_SAFE_INTEGER;
       }
-      //return result
-      return (int)result;
 
-        //T O(n) S O(1)
+      //return result
+      return result;
+
     }
     console.log(myAtoi("    -42"));
   </script>
 </head>
+
 <body>
-Implement atoi which converts a string to an integer.
+  Implement atoi which converts a string to an integer.
 
-The function first discards as many whitespace characters as necessary until the first non-whitespace character is
-found. Then, starting from this character, takes an optional initial plus or minus sign followed by as many numerical
-digits as possible, and interprets them as a numerical value.
+  The function first discards as many whitespace characters as necessary until the first non-whitespace character is
+  found. Then, starting from this character, takes an optional initial plus or minus sign followed by as many numerical
+  digits as possible, and interprets them as a numerical value.
 
-The string can contain additional characters after those that form the integral number, which are ignored and have no
-effect on the behavior of this function.
+  The string can contain additional characters after those that form the integral number, which are ignored and have no
+  effect on the behavior of this function.
 
-If the first sequence of non-whitespace characters in str is not a valid integral number, or if no such sequence exists
-because either str is empty or it contains only whitespace characters, no conversion is performed.
+  If the first sequence of non-whitespace characters in str is not a valid integral number, or if no such sequence
+  exists
+  because either str is empty or it contains only whitespace characters, no conversion is performed.
 
-If no valid conversion could be performed, a zero value is returned.
+  If no valid conversion could be performed, a zero value is returned.
 </body>
+
 </html>
