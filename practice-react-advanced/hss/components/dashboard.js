@@ -8,10 +8,10 @@ export default class Dashboard extends React.Component {
   render() {
     return (
       <div className="main">
-        <div className="mainSection">
+        <div className="mainSection row">
+          <div className="col-8 col-md-8 col-sm-12 col-xs-12"><Homescope /></div>
+          <div className="col-4 col-md-4 col-sm-12 col-xs-12"> <UserDetails /></div>
 
-          <Homescope />
-          <UserDetails />
         </div>
         <Footer />
       </div>
