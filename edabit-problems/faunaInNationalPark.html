@@ -1,18 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <script>
-    function faunaNumber(str){
+    function faunaNumber(str) {
+     
+      str = str.replace(",","").split(" ");
+      let resultArray = [];
+      let animalNameNumberObj = {};
 
+      str.forEach((currentVal, index,str) => {
+
+       animals.forEach((animal)=>{
+          if (animal === currentVal) {
+           let animalNumber = str[index - 1];
+           animalNameNumberObj[currentVal] = parseInt(animalNumber);
+           resultArray.push(animalNameNumberObj);
+           console.log(animalNameNumberObj)
+           animalNameNumberObj = {};
+
+         }
+       })
+
+      });
+      console.log('resultArray',resultArray);
+      return resultArray;
     }
     animals = ["muggercrocodile", "one-hornedrhino", "python", "moth", "monitorlizard", "bengaltiger"];
     console.log(faunaNumber("There are 24 one-hornedrhino, 50 python and 20000 mango."));
+    console.log(faunaNumber("There are 244 bengaltiger, 200 monitorlizard and 5000 apples."));
   </script>
 </head>
+
 <body>
 
 </body>
+
 </html>
