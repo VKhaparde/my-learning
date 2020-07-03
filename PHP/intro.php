@@ -30,4 +30,7 @@
   print "<br/>";
   print "<h2>"."Hello world" ."</h2>";
 
+  var_dump($x);
+  $cars = ["BMW","Honda","Mercedes"];
+  var_dump($cars);
    ?>
