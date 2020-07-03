@@ -21,8 +21,13 @@
   function test(){
     $GLOBALS['x'] = $GLOBALS['x'] + $GLOBALS['y'];
   }
-  
+
   test();
   echo $x;
   showValues();
+
+  print "<h2>Hello World</h2>";
+  print "<br/>";
+  print "<h2>"."Hello world" ."</h2>";
+
    ?>
