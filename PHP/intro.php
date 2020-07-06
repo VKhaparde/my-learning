@@ -33,4 +33,16 @@
   var_dump($x);
   $cars = ["BMW","Honda","Mercedes"];
   var_dump($cars);
+class Person{
+  function Person(){
+    $this->name = "Maggie";
+  }
+}
+$xyz = new Person();
+echo $xyz->name;
+$var = null;
+var_dump($var);
+
+$age = array("Peter"=>"12","Ram"=>"22","Gerome"=>"33");
+var_dump($age);
    ?>
