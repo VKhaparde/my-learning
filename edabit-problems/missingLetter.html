@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    const missingLetter =(str)=>{
+      let missingChar = null;
+      for(let i=0; i < str.length - 1 ;i++){
+        if(str.charCodeAt(i) + 1 !== str.charCodeAt(i+1)){
+          console.log("i",i);
+          console.log(str.charCodeAt(i));
+          console.log(str.charCodeAt(i+1));
+           missingChar = String.fromCharCode(str.charCodeAt(i) + 1);
+           break;
+        }
+      }
+      str.map((currentVal,str)=>{
+
+      })
+      if(missingChar){
+         return missingChar;
+      }
+      return "No Missing Letter";
+      console.log('missing character = ',missingChar);
+    }
+    console.log(missingLetter("abdefg"));
+    console.log(missingLetter("ghijklmno"));
+  </script>
+</head>
+<body>
+
+</body>
+</html>

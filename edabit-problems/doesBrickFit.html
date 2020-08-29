@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    // const doesBrickFit = (a, b, c, w, h) => {
+    //   let brickDimensions = [a, b, c];
+    //   brickDimensions.sort((x, y) => {
+    //     return x - y;
+    //   });
+    //   console.log(brickDimensions);
+    //   if (brickDimensions[0] * brickDimensions[1] === w * h) {
+    //     return true;
+    //   }
+    //  return false;
+    // }
+    const doesBrickFit = (a,b,c,w,h) =>{
+      return [a*b,a*c,b*c].some(element=>element <= w*h);
+    }
+    console.log(doesBrickFit(1, 2, 1, 1, 1));
+    console.log(doesBrickFit(1, 2, 2, 1, 1))
+  </script>
+</head>
+
+<body>
+  // (a,b,c) -- dimensions of the brick
+  // (w,h) -- dimensions of the hole
+  function doesBrickFit(a,b,c, w,h) {
+
+  }
+</body>
+
+</html>

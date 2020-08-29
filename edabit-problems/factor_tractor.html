@@ -7,7 +7,45 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <script>
-    
+    // const primeFactorize = (num)=>{
+    //     if(num===2){
+    //       return [2];
+    //     }
+    //     let factorsArray = [];
+    //   for(let i=2;i<num;i++){
+    //     if(num % i === 0){
+    //       factorsArray.push(i);
+    //     }
+    //   }
+    //   console.log(factorsArray);
+    //   let primeFactors = factorsArray.filter((currentVal) => {
+    //     if(currentVal===2){
+    //       return currentVal;
+    //     }
+    //     for (let i = 2; i < currentVal; i++) {
+    //       if (currentVal % i === 0) {
+    //         break;
+    //       }
+    //       return currentVal;
+    //     }
+    //   });
+    //   console.log("primeFactors:" ,primeFactors);
+    // }
+    const primeFactorize=(num)=>{
+      debugger;
+       let primeFactors = [];
+      for (let i = 2; i <= num; i++) {
+        while (num % i === 0) {
+          primeFactors.push(i);
+          num = num / i;
+        }
+
+      }
+      return primeFactors;
+    }
+
+    console.log(primeFactorize(36));
+
   </script>
 </head>
 
