@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    const decomposeAddress = (str) => {
+      let strArray = str.split(" ");
+      const regex = /[A-Z]/g;
+      const found = str.match(regex);
+      console.log(strArray);
+      console.log(found);
+    }
+    console.log(decomposeAddress("8919 Scarecrow Ct Idaho Falls, ID 80193"));
+  </script>
+</head>
+
+<body>
+Create a function that decomposes an address string into an array of five substrings:
+Street Number
+Street Name
+City Name
+State
+Zip Code
+
+decomposeAddress("8919 Scarecrow Ct Idaho Falls, ID 80193")
+➞ ["8919", "Scarecrow Ct", "Idaho Falls", "ID", "80193"]
+</body>
+
+</html>
