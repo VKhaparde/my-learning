@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="text/javascript">
+    const chosenWine = (wines) => {
+      if(wines === []){
+        return null;
+      }
+      else if(wines.length === 1){
+        return wines[0]['name'];
+      }
+      wines.sort((a,b)=>{
+        return b['price'] - a['price']
+      });
+      console.log(wines);
+      console.log(wines.length - 2);
+      return wines[wines.length-2]['name'];
+    }
+    console.log(chosenWine([
+        { name: "Wine A", price: 8.99 },
+        { name: "Wine 32", price: 13.99 },
+        { name: "Wine 9", price: 10.99 },
+        {name:"CCCC", price:9.60}
+      ]));
+  </script>
+</head>
+<body>
+
+</body>
+</html>
