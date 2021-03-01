@@ -15,10 +15,13 @@
         for (let i = 2; i <= 10; i++) {
           let power = (num ** BigInt(i)).toString();
           powerArray.push(power);
+          console.log(num);
+          console.log(BigInt(i));
+          console.log(power);
         }
         console.log(powerArray);
         const morphicArray = powerArray.filter((currentVal) => {
-          if (currentVal.endsWith(num)) {
+          if (currentVal.endsWith(Number(num))) {
             return currentVal;
           }
         });
@@ -40,7 +43,7 @@
           return "Amorphic";
         }
       }
-    console.log(powerMorphic(4));
+    console.log(powerMorphic(9999n));
     console.log(powerMorphic(68n));
   </script>
 </head>

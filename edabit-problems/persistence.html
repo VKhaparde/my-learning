@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    const additivePersistence = (n) => {
+      let iterations = 0;
+      while (n.toString().length > 1) {
+        n = n.toString().split("").reduce((acc, currentVal) => {
+          return acc + parseInt(currentVal);
+        }, 0);
+        iterations++;
+      }
+      return iterations;
+    }
+    const multiplicativePersistence = (n) => {
+      let iterations = 0;
+      while (n.toString().length > 1) {
+        n = n.toString().split("").reduce((acc, currentVal) => {
+          return acc * parseInt(currentVal);
+        }, 1);
+        iterations++;
+      }
+      return iterations;
+    }
+    console.log(additivePersistence(782));
+    console.log(multiplicativePersistence(782));
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
