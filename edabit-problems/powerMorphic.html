@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    const powerMorphic = (num) => {
+      // num = BigInt(num); In the problem it is already assumed that num is BigInt
+        if (num === 0) {
+          return "Polymorphic";
+        }
+        const powerArray = [];
+        for (let i = 2; i <= 10; i++) {
+          let power = (num ** BigInt(i)).toString();
+          powerArray.push(power);
+        }
+        console.log(powerArray);
+        const morphicArray = powerArray.filter((currentVal) => {
+          if (currentVal.endsWith(num)) {
+            return currentVal;
+          }
+        });
+        console.log(morphicArray);
+        console.log(morphicArray.length);
+        if (morphicArray.length === powerArray.length) {
+          return "Polymorphic";
+        }
+        else if (morphicArray.length === 4) {
+          return "Quadrimorphic";
+        }
+        else if (morphicArray.length === 2) {
+          return "Dimorphic";
+        }
+        else if (morphicArray.length === 1) {
+          return "Enamorphic";
+        }
+        else if (morphicArray.length === 0) {
+          return "Amorphic";
+        }
+      }
+    console.log(powerMorphic(4));
+    console.log(powerMorphic(68n));
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
